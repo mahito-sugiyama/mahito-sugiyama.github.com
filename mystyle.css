@@ -192,8 +192,10 @@ div#sidebar p {
 }
 div#sidebar hr {
   width: 110px;
-  color: silver;
-  background-color: silver;
+  /* color: silver; */
+  /* background-color: silver; */
+  color: #E26FAA;
+  background-color: #E26FAA;
 }
 
 
@@ -202,6 +204,7 @@ div#sidebar hr {
   margin-left:120px;
   padding-left: 20px;
   border-left: 1px #DCDCDC solid;
+  /* border-left: 1px #E26FAA solid; */
 }
 
 #main-content .wrapper {
@@ -250,7 +253,7 @@ h3 {
   font-weight: bold;
   padding: 0 0 0.3em 0;
   color: #666;
-  background: #FFFFFF url("./Images/line.png");
+  background: #FFFFFF url("./Images/lineGreen.png");
   background-repeat: no-repeat;
   background-position: left bottom;
   /* -webkit-border-image: -webkit-gradient(linear, left center, right center, from(#555), to(#fff)) 20 20 20 20 / 0 0px 1px 0 repeat stretch; */
