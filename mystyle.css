@@ -364,7 +364,7 @@ div#links a:hover {
 }
 
 div.g_body {
-  padding: 1.5em 0 3em 0;
+  padding: 0.5em 0 2em 0;
 }
 
 div.g_body p {
@@ -379,7 +379,7 @@ div#modify {
 }
 
 div#oldnews {
-  width: 53em;
+  width: 60em;
   text-align: right;
   padding: 20px 0 0 0;
 }
@@ -403,11 +403,11 @@ img.Manga {
 }
 
 div.pub {
-  padding: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
 }
 
 div.pub_body {
-  padding: 1.5em 0 2em 0;
+  padding: 0.5em 0 1em 0;
 }
 
 div.pub_body p {
@@ -476,7 +476,7 @@ span.mat {
 }
 
 ul {
-  width: 53em;
+  width: 60em;
   line-height: 1.5em;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
