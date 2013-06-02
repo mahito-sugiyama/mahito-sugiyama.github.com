@@ -1,17 +1,151 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>SUGIYAMA Mahito</title>
-  <meta name="keywords" content="learning, statistics, computer, fractal, computational learning theory" />
-  <meta name="description" content="SUGIYAMA Mahito's page - About" />
-  <link rel="stylesheet" type="text/css" href="mystyle.css" />
-  <link rel="index" href="./index.html" />
-  <script type="text/javascript">
+  <meta charset="utf-8">
+  <title>Mahito Sugiyama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a webpage about Mahito Sugiyama, who is a computer scientist studying about computational and discrete approaches to machine learning, knowledge discovery, and data minig.">
+  <meta name="author" content="Mahito Sugiyama">
+  <meta name="keywords" content="computing, learning, data, discretization">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- My style -->
+  <link href="css/mycss.css" rel="stylesheet" media="screen">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
 
+<body>
+
+  <div class="container-fluid">
+
+    <div class="masthead header">
+      <ul class="pull-right language">
+        <a href="about.html" class="btn btn-success">Japanese</a>
+        <p class="btn btn-success disabled language-en">English</p>
+      </ul>
+      <div class="navbar menu">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="index_e.html">Home</a></li>
+              <li class="active"><a href="about_e.html">About</a></li>
+              <!-- <li><a href="#">Research</a></li> -->
+              <li><a href="publications_e.html">Publications</a></li>
+              <li><a href="materials_e.html">Materials</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="contents-top">About</h2>
+    <h3 class="pub-header pub-header-top">Affiliation</h3>
+    <a href="http://webdav.tuebingen.mpg.de/u/karsten/group/index.html?page=news">Machine Learning &#38; Computational Biology Research Group,</a><br>
+    <a href="http://www.is.mpg.de/2178/en">Max Planck Institute for Intelligent Systems</a> and <a href="http://www.eb.tuebingen.mpg.de/">Max Planck Institute for Developmental Biology</a>,<br>
+    T&#252;bingen, Germany<br>
+
+    <h3 class="pub-header">Contact</h3>
+    <address>
+      MPI for Intelligent Systems, AG K. Borgwardt,<br>
+      Spemannstr. 38, 72076 T&#252;bingen, Germany.<br>
+      E-mail: mahito.sugiyama (at) tuebingen.mpg.de<br>
+    </address>
+
+    <hr>
+
+    <h3 class="pub-header">Academic degree</h3>
+    Doctor of Informatics, Kyoto University, 2012<br>
+    Thesis: <strong>Studies on Computational Learning via Discretization</strong>
+    <div class="thesis">
+      <a href="files/Sugiyama_PhDthesis.pdf" title="PhDthesis"><span class="label label-info">PDF</span></a>
+    </div>
+    <div class="thesis">
+      <a href="files/Sugiyama_PhDpresen.pdf" title="PhDpresen"><span class="label label-info">SLIDE</span></a>
+    </div>
+    <br>
+    Committee: Prof. <a href="http://www.iip.ist.i.kyoto-u.ac.jp/member/akihiro/index-e.html">Akihiro Yamamoto</a> (chair),
+    Prof. <a href="http://www.bic.kyoto-u.ac.jp/takutsu/members/takutsu/index.html">Tatsuya Akutsu</a>,
+    Prof. <a href="http://www-adsys.sys.i.kyoto-u.ac.jp/tt/Tanaka-e.html">Toshiyuki Tanaka</a><br>
+
+    <h3 class="pub-header">Awards and Honors</h3>
+    <dl class="dl-horizontal biosketch">
+      <dt>From 2013.8</dt>
+      <dd><a href="http://www.humboldt-foundation.de/web/humboldt-fellowship-postdoc.html">Humboldt Research Fellowship for Postdoctoral Researchers</a> (24 months)</dd>
+      <dt>2012.7&#8212;now</dt>
+      <dd>Postdoctoral fellowship of the Max Planck Society (24 months)</dd>
+      <!-- <dd>Grant of the funding guidelines of the Max Planck Society to promote scientific cooperation with foreign countries (24 months)</dd> -->
+      <dt>2010.4&#8212;2012.3</dt>
+      <dd>Research Fellow of the Japan Society for the Promotion of Science (DC2)</dd>
+      <dt>2009</dt>
+      <dd>
+       <a href="http://www.ai-gakkai.or.jp/jsai/info/award-sig.html#INCENTIVE">JSAI Incentive Award</a><br>
+       An Alternative to Statistical Hypothesis Testing Based on Computational Learning Theory,<br>
+       Mahito Sugiyama and Akihiro Yamamoto
+      </dd>
+    </dl>
+
+    <h3 class="pub-header">Memberships &#38; Professional Activities</h3>
+    <h4>Memberships</h4>
+    <ul>
+    	<li>The Japanease Society for Artificial Intelligence (JSAI)</li>
+    </ul>
+    <h4>Professional Activities</h4>
+    <ul>
+    	<li>Program Committee, <a href="http://icml.cc/2013/">The 30th International Conference on Machine Learning</a> (ICML 2013), Jun., 2013</li>
+    	<li>Program Committee, <a href="http://www.ecmlpkdd2013.org/">The 23rd European Conference on Machine Learning and 16th Principles and Practice of Knowledge Discovery in Databases</a> (ECML/PKDD 2013), Sep., 2013</li>
+    </ul>
+    <h4>Review</h4>
+    <ul>
+    	<li>The 21st International Conference on Algorithmic Learning Theory (ALT 2010), Oct., 2010</li>
+    </ul>
+    <h4>Teaching Assistant</h4>
+    <ul>
+      <li>Practice of Biological Information (2007&#8212;2011)</li>
+      <li><a href="http://ecs.kuis.kyoto-u.ac.jp/isle/le2/index.html">Hardware and Software Laboratory Project 2</a> (2008&#8212;2010)</li>
+    </ul>
+
+    <hr>
+
+    <h3 class="pub-header">Biosketch</h3>
+    <dl class="dl-horizontal biosketch">
+    	<dt>1999.4&#8212;2002.3</dt>
+    	<dd>Hyogo High School</dd>
+    	<dt>2002.4&#8212;2006.3</dt>
+    	<dd>Undergraduate School of Informatics and Mathematical Science,<br> Faculty of Engineering, Kyoto University</dd>
+    	<dt>2006.4&#8212;2012.3</dt>
+    	<dd>Department of Intelligence Science and Technology,<br> Graduate School of Informatics, Kyoto University</dd>
+    	<dt>2010.4&#8212;2012.3</dt>
+    	<dd>JSPS Research Fellow (DC2)</dd>
+    	<dt>2012.4&#8212;2012.6</dt>
+    	<dd>Postdoctoral Researcher, ISIR, Osaka University</dd>
+    	<dt>2012.7&#8212;now</dt>
+    	<dd>Research Scientist (postdoc), MPIs T&#252;bingen</dd>
+    </dl>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Mahito Sugiyama 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Analytics -->
+  <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30526401-1']);
   _gaq.push(['_trackPageview']);
@@ -21,109 +155,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
   </script>
-</head>
-<body id="onecolumn">
-  <div id="container">
-    <div id="header">
-      <div id="g_title">
-        <div id="selectLang">
-          <p><a href="./about.html">Japanese</a> / English</p>
-        </div>
-        <p><img id="titleImage" src="./Images/nameDesign_e.png" alt="SUGIYAMA Mahito" title="SUGIYAMA Mahito" /></p>
-      </div>
-    </div>
-    <div id="sidebar">
-      <p><a href="./index_e.html">Top</a></p>
-      <p>About Me &gt;</p>
-      <p><a href="./publications_e.html">Publications</a></p>
-      <p><a href="./materials_e.html">Materials</a></p>
-      <hr />
-      <div id="link">
-        <p><a href="http://www.scribd.com/hito_maro">Scribd</a></p>
-        <p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></p>
-        <p><a href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></p>        
-      </div>
-    </div>
-    <div id="main-content">
-      <h3>Academic degree</h3>
-      <div class="g_body">
-        <p>Doctor of Informatics, Kyoto University, 2012</p>
-        <p>Thesis: Studies on Computational Learning via Discretization <a href="./Files/Sugiyama_PhDthesis.pdf" title="PhDthesis">[PDF]</a> <a href="./Files/Sugiyama_PhDpresen.pdf" title="PhDpresen">[SLIDE]</a></p>
-        <p>Committee: Prof. <a href="http://www.iip.ist.i.kyoto-u.ac.jp/member/akihiro/index-e.html">Akihiro Yamamoto</a> (chair), Prof. <a href="http://www.bic.kyoto-u.ac.jp/takutsu/members/takutsu/index.html">Tatsuya Akutsu</a>, Prof. <a href="http://www-adsys.sys.i.kyoto-u.ac.jp/tt/Tanaka-e.html">Toshiyuki Tanaka</a></p>
-      </div>
-      <h3>Affiliation</h3>
-      <div class="g_body">
-        <p><a href="http://webdav.tuebingen.mpg.de/u/karsten/group/index.html?page=news">Machine Learning &#38; Computational Biology Research Group,</a></p>
-        <p><a href="http://www.is.mpg.de/2178/en">Max Planck Institute for Intelligent Systems</a> and <a href="http://www.eb.tuebingen.mpg.de/">Max Planck Institute for Developmental Biology</a></p>
-        <p>Tübingen, Germany</p>
-        <!-- <p>Postdoc researcher</p> -->
-      </div>
-      <h3>Contact</h3>
-      <div class="g_body">
-        <p>MPI for Intelligent Systems</p>
-        <p>AG K. Borgwardt</p>
-        <p>Spemannstr. 38</p>
-        <p>72076 Tübingen, Germany</p>
-        <p>E-mail: mahito.sugiyama (at) tuebingen.mpg.de</p>
-      </div>
-      <h3>Memberships &#38; Professional Activities</h3>
-      <div class="g_body">
-        <p>Memberships</p>
-        <ul>
-          <li>The Japanease Society for Artificial Intelligence (JSAI)</li>
-        </ul>
-        <p>Professional Activities</p>
-        <ul>
-          <li>Program Committee, The 30th International Conference on Machine Learning (ICML 2013), Jun., 2013</li>
-          <li>Program Committee, The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML/PKDD 2013), Sep., 2013</li>
-        </ul>
-        <p>Review</p>
-        <ul>
-          <li>The 21st International Conference on Algorithmic Learning Theory (ALT 2010), Oct., 2010</li>
-        </ul>
-      </div>
-      <h3>Award</h3>
-      <div class="g_body">
-        <p>2009 <a href="http://www.ai-gakkai.or.jp/jsai/info/award-sig.html#INCENTIVE">JSAI Incentive Award</a>:</p>
-        <p>An Alternative to Statistical Hypothesis Testing Based on Computational Learning Theory</p>
-        <p>Mahito Sugiyama and Akihiro Yamamoto</p>
-      </div>
-      <h3>Teaching Assistant</h3>
-      <div class="g_body">
-        <p>Practice of Biological Information</p>
-        <div class="ta">
-          <p>2007 - 2011</p>
-        </div>
-        <p><a href="http://ecs.kuis.kyoto-u.ac.jp/isle/le2/index.html">Hardware and Software Laboratory Project 2</a></p>
-        <div class="ta">
-          <p>2008 - 2010</p>
-        </div>
-      </div>
-      <h3>Biosketch</h3>
-      <div class="g_body">
-        <p>1999.4 - 2002.3 Hyogo High School</p>
-        <p>2002.4 - 2006.3 Undergraduate School of Informatics and Mathematical Science, Faculty of Engineering, Kyoto University</p>
-        <p>2006.4 - 2012.3 Department of Intelligence Science and Technology, Graduate School of Informatics, Kyoto University</p>
-        <p>2010.4 - 2012.3 JSPS Research Fellow (DC2)</p>
-        <!-- <p>（研究課題：<a href="http://kaken.nii.ac.jp/ja/p/10J05714">アルゴリズムによって正当性を保証する知識発見手法の構築</a>）</p> -->
-        <p>2012.4 - 2012.6 Postdoctoral Researcher, ISIR, Osaka University</p>
-        <p>2012.7 - Research Scientist (postdoc), MPIs Tübingen</p>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="validCheck">
-        <p>
-          <a href="http://validator.w3.org/check?uri=referer">
-            <img src="./Images/valid-xhtml10.png" alt="Valid XHTML 1.0" height="31" width="88" />
-          </a>&nbsp;
-          <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="./Images/vcss.png" alt="Valid CSS!" height="31" width="88" />
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+  
 </body>
 </html>

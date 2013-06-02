@@ -1,19 +1,115 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html lang="jp">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>SUGIYAMA Mahito</title>
-  <meta name="keywords" content="learning, statistics, computer, fractal, computational learning theory, 学習, 統計, 計算機, フラクタル, 計算論的学習理論" />
-  <meta name="description" content="杉山麿人のページ - Top" />
-  <link rel="stylesheet" type="text/css" href="mystyle.css" />
-  <link rel="index" href="./index.html" />
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="accordion.js"></script>
-  <script type="text/javascript">
+  <meta charset="utf-8">
+  <title>Mahito Sugiyama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="杉山麿人のページです．機械学習，データマイニング，知識発見などを計算論的な立場から研究しています．">
+  <meta name="author" content="Mahito Sugiyama">
+  <meta name="keywords" content="計算, 学習, データ, 離散化">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- My style -->
+  <link href="css/mycss.css" rel="stylesheet" media="screen">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
 
+<body>
+
+  <div class="container-fluid">
+
+    <div class="masthead header">
+      <ul class="pull-right language">
+        <p class="btn btn-success disabled">Japanese</p>
+        <a href="index_e.html" class="btn btn-success language-en">English</a>
+      </ul>
+      <div class="navbar menu">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="about.html">自己紹介</a></li>
+              <!-- <li><a href="#">研究</a></li> -->
+              <li><a href="publications.html">研究業績</a></li>
+              <li><a href="materials.html">講義資料</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="contents-top">杉山 麿人</h2>
+    <div class="intro">
+      <div class="row-fluid">
+        <div class="span8">
+          <p class="lead lead-jp">
+            ドイツのマックスプランク研究所で，ポスドク研究員として計算機科学の研究をしています．
+            専門分野は人工知能です．特に，機械学習や知識発見，データマイニングと呼ばれる分野を研究しています．
+            主に計算論的・離散的なアプローチで，学習の基礎理論から応用までに取り組んでいます．
+          </p>
+        </div>
+        <div class="span4">
+          <p class="text-center"><script type="text/JavaScript" src="./js/manga.js"></script></p>
+          <noscript><p class="text-center"><img src="./img/Manga_08.png" alt="Manga"></p></noscript>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="news-header">News</h3>
+    <dl class="dl-horizontal news">
+      <dt>2013.5.27</dt>
+      <dd>
+        論文誌 <a href="http://www.iospress.nl/journal/intelligent-data-analysis/">Intelligent Data Anlaysis</a> で論文 <strong>"Semi-supervised Learning on Closed Set Lattices"</strong> が公開されました
+        <a href="files/Sugiyama_IDA01.pdf" title="IDA01"><span class="label label-info">PDF</span></a>
+      </dd>
+      <dt>2013.4.23</dt>
+      <dd>
+        <a href="http://www.iscb.org/ismbeccb2013">The 21st Annual International Conference on Intelligent Systems for Molecular Biology</a> (ISMB/ECCB 2013, 2013.7.21-23) に，機械学習を用いた遺伝子データ解析に関する論文 <strong>"Efficient Network-guided Multi-locus Association Mapping with Graph Cuts"</strong>（主著: Chlo&#233さん）が採択されました
+      </dd>
+      <dt>2013.4.15</dt>
+      <dd>
+        アレクサンダー・フォン・フンボルト財団の <a href="http://www.humboldt-foundation.de/web/humboldt-fellowship-postdoc.html">Humboldt Research Fellowship for Postdoctoral Researchers</a> に採択されました
+      </dd>
+      <dt>2013.4.2</dt>
+      <dd>
+        <a href="http://ijcai13.org/">The 23rd International Joint Conference on Artificial Intelligence</a> (IJCAI 2013, 2013.8.3-9) に，情報次元を用いて統計的独立性を測る手法についての論文 <strong>"Measuring Statistical Dependence via the Mutual Information Dimension"</strong> が採択されました
+      </dd>
+      <dt>2012.7.1</dt>
+      <dd>
+        7月から，<a href="http://tuebingen.mpg.de/en/homepage.html">マックスプランク研究所</a>でポスドク研究員として働きます
+      </dd>
+      <dt>2012.6.25</dt>
+      <dd>
+        論文誌 <a href="http://www.springer.com/computer/ai/journal/10994">Machine Learning</a> で論文 <strong>"Learning Figures with the Hausdorff Metric by Fractals&#151;Towards Computable Binary Classification"</strong> が公開されました
+        <a href="http://www.springerlink.com/content/h4h25161q638l4n4/"><span class="label label-info">Link</span></a>
+      </dd>
+    </dl>
+    <p class="text-right"><a href="./oldnews.html">過去のニュースはこちら</a></p>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Mahito Sugiyama 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Analytics -->
+  <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30526401-1']);
   _gaq.push(['_trackPageview']);
@@ -23,69 +119,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
   </script>
-</head>
-<body id="onecolumn">
-  <div id="container">
-    <div id="header">
-      <div id="g_title">
-        <div id="selectLang">
-          <p>Japanese / <a href="./index_e.html">English</a></p>
-        </div>
-        <p><img id="titleImage" src="./Images/nameDesign.png" alt="杉山 麿人" title="杉山 麿人" /></p>
-      </div>
-    </div>
-    <div id="sidebar">
-      <p>Top &gt;</p>
-      <p><a href="./about.html">自己紹介</a></p>
-      <p><a href="./publications.html">研究業績</a></p>
-      <p><a href="./materials.html">講義資料</a></p>
-      <hr />
-      <div id="link">
-        <p><a href="http://www.scribd.com/hito_maro">Scribd</a></p>
-        <p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></p>
-        <p><a href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></p>        
-      </div>
-    </div>
-    <div id="main-content">
-      <h3>はじめに</h3>
-      <div class="g_body">
-        <script type="text/JavaScript" src="manga.js">
-        </script>
-        <noscript>
-          <p><img class="Manga" src="./Images/Manga_08.png" alt="Manga" /></p>
-        </noscript>
-        <p>ドイツのマックスプランク研究所で，ポスドク研究員として計算機科学の研究をしています．</p>
-        <p>専門分野は人工知能です．特に，機械学習や知識発見，データマイニングと呼ばれる分野を研究しています．</p>
-        <p>主に計算論的・離散的なアプローチで，学習の基礎理論から応用までに取り組んでいます．</p>
-        <p><a href="./about.html">連絡先等の情報はこちら．</a></p>
-      </div>
-      <h3>ニュース</h3>
-      <div class="g_body">
-        <ul>
-          <li>アレクサンダー・フォン・フンボルト財団の <a href="http://www.humboldt-foundation.de/web/humboldt-fellowship-postdoc.html">Humboldt Research Fellowship for Postdoctoral Researchers</a> に採択されました <span class="news">(2013.4.15)</span></li>
-          <li><a href="http://ijcai13.org/">The 23rd International Joint Conference on Artificial Intelligence</a> (IJCAI 2013, 2013.8.3-9) に，情報次元を用いて統計的独立性を測る手法についての論文 "Measuring Statistical Dependence via the Mutual Information Dimension" が採択されました <span class="news">(2013.4.2)</span></li>
-          <li>7月から，<a href="http://tuebingen.mpg.de/en/homepage.html">マックスプランク研究所</a>でポスドク研究員として働きます <span class="news">(2012.7.1)</span></li>
-          <li>論文誌 <a href="http://www.springer.com/computer/ai/journal/10994">Machine Learning</a> で論文 "Learning Figures with the Hausdorff Metric by Fractals&#151;Towards Computable Binary Classification" が公開されました <a href="http://www.springerlink.com/content/h4h25161q638l4n4/">[SpringerLink]</a> <span class="news">(2012.6.25)</span></li>
-        </ul>
-        <div id="oldnews">
-          <p><a href="./oldnews.html">過去のニュースはこちら</a></p>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="validCheck">
-        <p>
-          <a href="http://validator.w3.org/check?uri=referer">
-            <img src="./Images/valid-xhtml10.png" alt="Valid XHTML 1.0" height="31" width="88" />
-          </a>&nbsp;
-          <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="./Images/vcss.png" alt="Valid CSS!" height="31" width="88" />
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
+
 </body>
 </html>

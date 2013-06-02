@@ -1,17 +1,150 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html lang="jp">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>SUGIYAMA Mahito - Materials</title>
-  <meta name="keywords" content="learning, statistics, computer, fractal, computational learning theory, 学習, 統計, 計算機, フラクタル, 計算論的学習理論" />
-  <meta name="description" content="杉山麿人のページ - 講義資料" />
-  <link rel="stylesheet" type="text/css" href="mystyle.css" />
-  <link rel="index" href="./index.html" />
-  <script type="text/javascript">
+  <meta charset="utf-8">
+  <title>Mahito Sugiyama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="杉山麿人のページです．機械学習，データマイニング，知識発見などを計算論的な立場から研究しています．">
+  <meta name="author" content="Mahito Sugiyama">
+  <meta name="keywords" content="計算, 学習, データ, 離散化">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- My style -->
+  <link href="css/mycss.css" rel="stylesheet" media="screen">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
 
+<body>
+
+  <div class="container-fluid">
+
+    <div class="masthead header">
+      <ul class="pull-right language">
+        <p class="btn btn-success disabled">Japanese</p>
+        <a href="materials_e.html" class="btn btn-success language-en">English</a>
+      </ul>
+      <div class="navbar menu">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">自己紹介</a></li>
+              <!-- <li><a href="#">研究</a></li> -->
+              <li><a href="publications.html">研究業績</a></li>
+              <li class="active"><a href="materials.html">講義資料</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="contents-top">講義資料</h2>
+    <h3 class="pub-header pub-header-top">生体情報論演習 (2011)</h3>
+    <div class="prof-each">
+      <h4>Part 1: Introduction</h4>
+      <dl class="dl-horizontal news">
+        <dt>2011.4.15</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110415.ppt" title="0415PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110415.pdf" title="0415PDF"><span class="label label-info">PDF</span></a></li>
+          </ul>
+        </dd>
+      </dl>
+      <h4>Part 2: PowerPointの使い方</h4>
+      <dl class="dl-horizontal news">
+        <dt>2011.4.22</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110422.ppt" title="0422PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110422.pdf" title="0422PDF"><span class="label label-info">PDF</span></a></li>
+          </ul>
+        </dd>
+      </dl>
+      <h4>Part 3: 統計法の実践</h4>
+      <dl class="dl-horizontal news">
+        <dt>2011.6.3</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110603.ppt" title="0603PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110603.pdf" title="0603PDF"><span class="label label-info">PDF</span></a></li>
+            <li><a href="./materials/seitai20110603_data.xls" title="0603DATA"><span class="label label-info">DATA</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.6.17</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110617.ppt" title="0617PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110617.pdf" title="0617PDF"><span class="label label-info">PDF</span></a></li>
+            <li><a href="./materials/seitai20110617_data.xls" title="0617DATA"><span class="label label-info">DATA</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.6.24</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110624.ppt" title="0624PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110624.pdf" title="0624PDF"><span class="label label-info">PDF</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.7.1</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110701.ppt" title="0701PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110701.pdf" title="0701PDF"><span class="label label-info">PDF</span></a></li>
+            <li><a href="./materials/seitai20110701_data.xls" title="0701DATA"><span class="label label-info">DATA</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.7.8</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110708.ppt" title="0708PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110708.pdf" title="0708PDF"><span class="label label-info">PDF</span></a></li>
+            <li><a href="./materials/seitai20110708_data.xls" title="0708DATA"><span class="label label-info">DATA</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.7.15</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110715.ppt" title="0715PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110715.pdf" title="0715PDF"><span class="label label-info">PDF</span></a></li>
+            <li><a href="./materials/seitai20110715_data.xls" title="0715DATA"><span class="label label-info">DATA</span></a></li>
+          </ul>
+        </dd>
+        <dt>2011.7.22</dt>
+        <dd>
+          <ul class="inline">
+            <li><a href="./materials/seitai20110722.ppt" title="0722PPT"><span class="label label-info">PPT</span></a></li>
+            <li><a href="./materials/seitai20110722.pdf" title="0722PDF"><span class="label label-info">PDF</span></a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Mahito Sugiyama 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/myjs.js"></script>
+  <!-- Analytics -->
+  <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30526401-1']);
   _gaq.push(['_trackPageview']);
@@ -21,67 +154,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
   </script>
-</head>
-<body id="onecolumn">
-  <div id="container">
-    <div id="header">
-      <div id="g_title">
-        <div id="selectLang">
-          <p>Japanese / <a href="./materials_e.html">English</a></p>
-        </div>
-        <p><img id="titleImage" src="./Images/nameDesign.png" alt="杉山 麿人" title="杉山 麿人" /></p>
-      </div>
-    </div>
-    <div id="sidebar">
-      <p><a href="./index.html">Top</a></p>
-      <p><a href="./about.html">自己紹介</a></p>
-      <p><a href="./publications.html">研究業績</a></p>
-      <p>講義資料 &gt;</p>
-      <hr />
-      <div id="link">
-        <p><a href="http://www.scribd.com/hito_maro">Scribd</a></p>
-        <p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></p>
-        <p><a href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></p>        
-      </div>
-      <!-- <a href="./links.html">Links</a> -->
-    </div>
-    <div id="main-content">
-      <h3>2011年 生体情報論演習</h3>
-      <div class="g_body">
-        <div class="mat_body">
-          <p><span class="mattitle">Part 1, Introduction</span></p>
-          <p><span class="mat">2011.4.15 </span><a href="./materials/seitai20110415.ppt" title="0415PPT">[PPT]</a> <a href="./materials/seitai20110415.pdf" title="0415PDF">[PDF]</a> </p>
-        </div>
-        <div class="mat_body">
-          <p><span class="mattitle">Part 2, PowerPointの使い方</span></p>
-          <p><span class="mat">2011.4.22 </span><a href="./materials/seitai20110422.ppt" title="0422PPT">[PPT]</a> <a href="./materials/seitai20110422.pdf" title="0422PDF">[PDF]</a> </p>
-        </div>
-        <div class="mat_body">
-          <p><span class="mattitle">Part 3, 統計法の実践</span></p>
-          <p><span class="mat">2011.6.3  </span><a href="./materials/seitai20110603.ppt" title="0603PPT">[PPT]</a> <a href="./materials/seitai20110603.pdf" title="0603PDF">[PDF]</a> <a href="./materials/seitai20110603_data.xls" title="0603DATA">[DATA]</a></p>
-          <p><span class="mat">2011.6.17 </span><a href="./materials/seitai20110617.ppt" title="0617PPT">[PPT]</a> <a href="./materials/seitai20110617.pdf" title="0617PDF">[PDF]</a> <a href="./materials/seitai20110617_data.xls" title="0617DATA">[DATA]</a></p>
-          <p><span class="mat">2011.6.24 </span><a href="./materials/seitai20110624.ppt" title="0624PPT">[PPT]</a> <a href="./materials/seitai20110624.pdf" title="0624PDF">[PDF]</a></p>
-          <p><span class="mat">2011.7.1 </span><a href="./materials/seitai20110701.ppt" title="0701PPT">[PPT]</a> <a href="./materials/seitai20110701.pdf" title="0701PDF">[PDF]</a> <a href="./materials/seitai20110701_data.xls" title="0701DATA">[DATA]</a></p>
-          <p><span class="mat">2011.7.8 </span><a href="./materials/seitai20110708.ppt" title="0708PPT">[PPT]</a> <a href="./materials/seitai20110708.pdf" title="0708PDF">[PDF]</a> <a href="./materials/seitai20110708_data.xls" title="0708DATA">[DATA]</a></p>
-          <p><span class="mat">2011.7.15 </span><a href="./materials/seitai20110715.ppt" title="0715PPT">[PPT]</a> <a href="./materials/seitai20110715.pdf" title="0715PDF">[PDF]</a> <a href="./materials/seitai20110715_data.xls" title="0715DATA">[DATA]</a></p>
-          <p><span class="mat">2011.7.22 </span><a href="./materials/seitai20110722.ppt" title="0722PPT">[PPT]</a> <a href="./materials/seitai20110722.pdf" title="0722PDF">[PDF]</a></p>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="validCheck">
-        <p>
-          <a href="http://validator.w3.org/check?uri=referer">
-            <img src="./Images/valid-xhtml10.png" alt="Valid XHTML 1.0" height="31" width="88" />
-          </a>&nbsp;
-          <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="./Images/vcss.png" alt="Valid CSS!" height="31" width="88" />
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</body>
+
+  </body>
 </html>

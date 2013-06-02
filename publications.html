@@ -1,20 +1,622 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html lang="jp">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <title>SUGIYAMA Mahito - Publications</title>
-  <meta name="keywords" content="learning, statistics, computer, fractal, computational learning theory, 学習, 統計, 計算機, フラクタル, 計算論的学習理論" />
-  <meta name="description" content="杉山麿人のページ - Publications" />
-  <link rel="stylesheet" type="text/css" href="mystyle.css" />
-  <link rel="index" href="./index.html" />
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="accordion.js"></script>
-  <script type="text/javascript" src="olreverse.js"></script>
-  <script type="text/javascript">
+  <meta charset="utf-8">
+  <title>Mahito Sugiyama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a webpage about Mahito Sugiyama, who is a computer scientist studying about computational and discrete approaches to machine learning, knowledge discovery, and data minig.">
+  <meta name="author" content="Mahito Sugiyama">
+  <meta name="keywords" content="computing, learning, data, discretization">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- My style -->
+  <link href="css/mycss.css" rel="stylesheet" media="screen">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
 
+<body>
+
+  <div class="container-fluid">
+
+    <div class="masthead header">
+      <ul class="pull-right language">
+        <p class="btn btn-success disabled">Japanese</p>
+        <a href="publications_e.html" class="btn btn-success language-en">English</a>
+      </ul>
+      <div class="navbar menu">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">自己紹介</a></li>
+              <!-- <li><a href="#">研究</a></li> -->
+              <li class="active"><a href="publications.html">研究業績</a></li>
+              <li><a href="materials.html">講義資料</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="contents-top">研究業績</h2>
+    <h3 class="pub-header pub-header-top">著書</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub">
+        小林 茂夫, <span class="myname">杉山 麿人</span>:<br>
+        <strong>生命科学研究に成功するための統計法ノート</strong>,<br>
+        講談社, 2009年4月.<br>
+      </li>
+    </ol>
+
+    <h3 class="pub-header">学術雑誌</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub">
+        Azencott, C.-A., Grimm, D.,  <span class="myname">Sugiyama, M.</span>, Kawahara, Y., Borgwardt, K. M.:<br>
+        <strong>Efficient Network-guided Multi-locus Association Mapping with Graph Cut</strong>,<br>
+        <em><a href="http://bioinformatics.oxfordjournals.org/">Bioinformatics</a></em>
+        (<em><a href="http://www.iscb.org/ismbeccb2013">ISMB/ECCB 2013</a></em>), accepted.
+        <ul class="inline pub-link">
+          <li><p id="popj5" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://arxiv.org/abs/1211.2315"><span class="label label-info">arXiv</span></a></li>
+        </ul>
+      </li>
+      <li class="pub" id="IDA01">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>Semi-Supervised Learning on Closed Set Lattices</strong>,<br>
+        <em><a href="http://www.iospress.nl/journal/intelligent-data-analysis/">Intelligent Data Analysis</a></em>, 17(3), 399&#8212;421, 2013.
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.3233/IDA-130586">10.3233/IDA-130586</a>]</li>
+          <li><p id="popj4" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="files/Sugiyama_IDA01.pdf" title="IDA01"><span class="label label-info">PDF</span></a></li>
+        </ul>
+      </li>
+      <li class="pub" id="MLJ01">
+        <span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:<br>
+        <strong>Learning Figures with the Hausdorff Metric by Fractals&#151;Towards Computable Binary Classification</strong>,<br>
+        <em><a href="http://www.springer.com/computer/ai/journal/10994">Machine Learning</a></em>, 90(1), 91&#8212;126, 2013.
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1007/s10994-012-5301-z">10.1007/s10994-012-5301-z</a>]</li>
+          <li><p id="popj3" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="files/Sugiyama_MLJ01.pdf" title="MLJ01"><span class="label label-info">PDF (draft)</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        Otaki, K., <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>Privacy Preserving Using Dummy Data for Set Operations in Itemset Mining Implemented with ZDDs</strong>,<br>
+        <em><a href="http://search.ieice.org/bin/index.php?category=D&amp;lang=E;&amp;curr=1;">IEICE Trans. Inf. &#38; Syst.</a></em>, E95-D(12), 3017&#8212;3025, 2012.
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1587/transinf.E95.D.3017">10.1587/transinf.E95.D.3017</a>]</li>
+          <li><p id="popj2" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+        </ul>
+      </li>
+      <li class="pub" id="TOM01">
+        <span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:<br>
+        <strong>Semi-Supervised Ligand Finding Using Formal Concept Analysis</strong>,<br>
+        <em><a href="http://daemon.inf.uec.ac.jp/MPSPortal/TOM/cfp_E.html">IPSJ TOM</a></em>, 5(2), 39&#8212;48, 2012.
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.2197/ipsjtrans.5.114">10.2197/ipsjtrans.5.114</a>]</li>
+          <li><p id="popj1" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="https://www.jstage.jst.go.jp/article/ipsjtrans/5/0/5_114/_pdf"><span class="label label-info">PDF (reprint)</span></a></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3 class="pub-header">国際会議（査読付）</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub">
+        Azencott, C.-A., Grimm, D.,  <span class="myname">Sugiyama, M.</span>, Kawahara, Y., Borgwardt, K. M.:<br>
+        <strong>Efficient Network-guided Multi-locus Association Mapping with Graph Cut</strong>,<br>
+        <em><a href="http://www.iscb.org/ismbeccb2013">ISMB/ECCB 2013</a></em>, accepted. (the proceedings will appear in <em><a href="http://bioinformatics.oxfordjournals.org/">Bioinformatics</a></em>)
+        <ul class="inline pub-link">
+          <li><p id="popj5" class="popj bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://arxiv.org/abs/1211.2315"><span class="label label-info">arXiv</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Borgwardt, K. M.:<br>
+        <strong>Measuring Statistical Dependence via the Mutual Information Dimension</strong>,<br>
+        <em><a href="http://ijcai13.org/">IJCAI 2013</a></em>, accepted.
+        <ul class="inline pub-link">
+          <li><p id="popc10" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://github.com/mahito-sugiyama/MID/"><span class="label label-info">CODE (GitHub)</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>A Fast and Flexible Clustering Algorithm Using Binary Discretization</strong>,<br>
+        <em><a href="http://icdm2011.cs.ualberta.ca/">IEEE ICDM 2011</a></em>.
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1109/ICDM.2011.9">10.1109/ICDM.2011.9</a>]</li>
+          <li><p id="popc9" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://www.scribd.com/doc/75716601/A-Fast-and-Flexible-Clustering-Algorithm-Using-Binary-Discretization" title="ICDM2011(Scribd)"><span class="label label-info">SLIDE (Scribd)</span></a></li>
+          <li><a href="files/Sugiyama_ICDM2011.pdf" title="ICDM2011"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yoshioka, T., Yamamoto, A.:<br>
+        <strong>High-throughput Data Stream Classification on Trees</strong>,<br>
+        <em><a href="http://www-erato.ist.hokudai.ac.jp/alsip2011/index.html">ALSIP 2011</a></em>.
+        <ul class="inline pub-link">
+          <li><p id="popc8" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>The Minimum Code Length for Clustering Using the Gray Code</strong>,<br>
+        <em><a href="http://www.ecmlpkdd2011.org/index.php">ECML PKDD 2011</a></em>
+        (<a href="http://www.springerlink.com/content/f81574811gv60013/" title="ECMLPKDD2011"><em>LNCS</em> 6913</a>).
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1007/978-3-642-23808-6_24">10.1007/978-3-642-23808-6_24</a>]</li>
+          <li><p id="popc7" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://www.scribd.com/doc/75596284/The-Minimum-Code-Length-for-Clustering-Using-the-Gray-Code" title="ECMLPKDD2011(Scribd)"><span class="label label-info">SLIDE (Scribd)</span></a></li>
+          <li><a href="files/Sugiyama_ECMLPKDD2011.pdf" title="ECMLPKDD2011"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>Semi-Supervised Learning for Mixed-Type Data via Formal Concept Analysis</strong>,<br>
+        <em><a href="http://www.informatik.uni-trier.de/~ley/db/conf/iccs/">ICCS 2011</a></em>
+        (<a href="http://www.springerlink.com/content/hn6658x0k7716p04/" title="ICCS2011"><em>LNCS</em> 6828</a>).
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1007/978-3-642-22688-5_21">10.1007/978-3-642-22688-5_21</a>]</li>
+          <li><p id="popc6" class="popc bibtex pub-add"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="files/Sugiyama_ICCS2011.pdf" title="ICCS2011"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+        <br>
+        <p class="pub-add-info">(There is an extended <a href="#IDA01" title="IDA01">journal version</a>)</p>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>Fast Clustering Based on the Gray-Code</strong>,<br>
+        <em><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL2011/">LLLL 2011</a></em>.
+        <ul class="inline pub-link">
+          <li><p id="popc5" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>The Coding Divergence for Measuring the Complexity of Separating Two Sets</strong>,<br>
+        <em><a href="http://sugiyama-www.cs.titech.ac.jp/ACML2010/">ACML 2010</a></em>
+        (<a href="http://jmlr.csail.mit.edu/proceedings/papers/v13/"><em>JMLR Workshop and Conference Proceedings</em> 13</a>).
+        <ul class="inline pub-link">
+          <li><p id="popc4" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="http://jmlr.csail.mit.edu/proceedings/papers/v13/sugiyama10b/sugiyama10b.pdf" title="ACML2010"><span class="label label-info">PDF</span></a></li>
+          <li><a href="files/Sugiyama_ACML2010.pdf" title="ACML2010"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:<br>
+        <strong>Learning Figures with the Hausdorff Metric by Fractals</strong>,<br>
+        <em><a href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT10/alt10.jhtml">ALT</a></em>
+        (<a href="http://www.springerlink.com/content/p142346471g1117r/" title="ALT2010"><em>LNCS</em> 6331</a>).
+        <ul class="inline pub-link">
+          <li>[DOI: <a href="http://dx.doi.org/10.1007/978-3-642-16108-7_26">10.1007/978-3-642-16108-7_26</a>]</li>
+          <li><p id="popc3" class="popc bibtex pub-add"><span class="label label-info">BibTeX</span></p></li>
+          <li><a href="files/Sugiyama_ALT2010.pdf" title="ALT2010"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+        <p class="pub-add-info">(There is an extended <a href="#MLJ01" title="MLJ01">journal version</a>)</p>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:<br>
+        <strong>Learning Figures with the Hausdorff Metric by Self-similar Sets</strong>,<br>
+        <em><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL09/">LLLL 2009</a></em>.
+        <ul class="inline pub-link">
+          <li><p id="popc2" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+        </ul>
+      </li>
+      <li class="pub">
+        <span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:<br>
+        <strong>Learning from Real-Valued Data with the Model Inference Mechanism through the Gray-Code Embedding</strong>,<br>
+        <em><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL/LLLL06/LLLL2006.html">LLLL 2006</a></em>.
+        <ul class="inline pub-link">
+          <li><p id="popc1" class="popc bibtex"><span class="label label-info">BibTeX</span></p></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3 class="pub-header">国際会議</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub pub-add-info">
+        <span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:<br>
+        <strong>Discovering Ligands for TRP Ion Channels Using Formal Concept Analysis</strong>,<br>
+        <em><a href="http://ilp11.doc.ic.ac.uk/">ILP 2011</a>.</em>
+        (There is an extended <a href="#TOM01" title="TOM">journal version</a>)
+      </li>
+      <li class="pub">
+        Kawai, Y., <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:<br>
+        <strong>Mining RNA Families with Structure Histograms</strong>,<br>
+        <em><a href="http://ibisml.org/dmss2011/">DMSS 2011</a>.</em>
+        <ul class="inline pub-link">
+          <li><a href="http://ibisml.org/archive/dmss2011/yamamoto.pdf" title="DMSS2011"><span class="label label-info">PDF</span></a></li>
+        </ul>        
+      </li>
+    </ol>
+
+    <h3 class="pub-header">学会・研究会</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub pub-add-info">
+        <span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:<br>
+        <strong>Semi-Supervised Ligand Finding Using Formal Concept Analysis</strong>,<br>
+        <a href="http://www.ipsj.or.jp/kenkyukai/event/mps86bio27.html">第86回MPS・第27回BIO合同研究発表会</a>, IPSJ SIG Technical Report, vol.2011-MPS-86, no.28, 2011年12月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong><a href="https://kaigi.org/jsai/webprogram/2011/paper-535.html">2進符号化を活用した高速かつ柔軟なクラスタリング</a></strong>,<br>
+        <a href="http://www.ai-gakkai.or.jp/jsai/conf/2011/">第25回人工知能学会全国大会</a>, 1P2-lb-3in, 2011年6月.
+      </li>
+      <li class="pub pub-add-info">
+        秦 亮一, 池田 真土里, <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong><a href="http://www.ieice.org/ken/paper/20110329Y0Gu/">質問学習とメタアルゴリズムの組合せによる文字列画像検索</a></strong>,<br>
+        信学技報, vol. 110, no. 476, IBISML2010-120, pp. 115-122, 2011年3月.
+      </li>
+      <li class="pub pub-add-info">
+        吉岡 正志, <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong><a href="http://www.ieice.org/ken/paper/2011032880Gt/">符号化ダイバージェンスを用いたクラス分類のためのオンラインアルゴリズム</a></strong>,<br>
+        信学技報, vol. 110, no. 476, IBISML2010-117, pp. 93-100, 2011年3月.
+      </li>
+      <li class="pub pub-add-info">
+        福村 貴志, <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong><a href="http://www.ieice.org/ken/paper/20110328r0Gu/">木構造を利用した自然画像の部分領域検索とフラクタル圧縮・マイニングへの応用</a></strong>,<br>
+        信学技報, vol. 110, no. 476, IBISML2010-112, pp. 55-62, 2011年3月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong>離散量と連続量が混在するデータに対する形式概念分析を用いた半教師あり学習</strong>,<br>
+        <a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai80.html">第80回人工知能基本問題研究会</a>資料, SIG-FPAI-B003, pp. 7-14, 2010年11月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong>グレイ符号化ダイバージェンスによる連続データからの計算論的知識発見</strong>,<br>
+        <a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai78.html">第78回人工知能基本問題研究会</a>資料, SIG-FPAI-B001-03, pp. 17-24, 2010年7月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong><a href="http://www.ieice.org/ken/paper/20100615HazE/">符号化ダイバージェンスによる2つの集合の異なり具合の定量化</a></strong>,<br>
+        信学技報, vol. 110, no. 76, IBISML2010-26, pp. 181-187, 2010年6月.
+        <ul class="inline pub-link">
+          <li><a href="http://ibisml.org/001/"><span class="label label-info">SLIDE</span></a></li>
+        </ul>
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 山本 章博:<br>
+        <strong>計算論的学習理論に基づく統計的仮説検定の代替手法</strong>,<br>
+        <a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai77.html">第77回人工知能基本問題研究会</a>資料, SIG-FPAI-A904, pp. 43-48, 2010年3月.<br>
+        (<a href="http://www.ai-gakkai.or.jp/jsai/info/award-sig.html#INCENTIVE">2009年度 人工知能学会 研究会優秀賞</a>)
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 廣渡 栄寿, 立木 秀樹, 山本 章博:<br>
+        <strong>ハウスドルフ距離を用いたフラクタルによる図形の学習</strong>,<br>
+        <a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai74.html">第74回人工知能基本問題研究会</a>資料, SIG-FPAI-A901, pp. 31-38, 2009年9月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 廣渡 栄寿, 立木 秀樹, 山本 章博:<br>
+        <strong>グレイコードとモデル推論を利用した実数値関数の学習</strong>,<br>
+        <a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai62.html">第62回人工知能基本問題研究会</a>資料, SIG-FPAI-A504, pp. 47-54, 2006年3月.
+      </li>
+    </ol>
+
+    <h3 class="pub-header">口頭発表</h3>
+    <ol reversed="reversed" class="pub-each">
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>:<br>
+        <strong>Learning Figures with the Hausdorff Metric by Self-similar Sets</strong>,<br>
+        SLACS 2009, 2009年8月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 細川 浩, 前川 真吾, 小林 茂夫:<br>
+        <strong>ゼブラフィッシュが持つ自律性体温調節システム</strong>,<br>
+        第85回日本生理学会大会, 2008年3月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:<br>
+        <strong>冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物における恒温性の起源</strong>,<br>
+        第84回日本生理学会大会, 2007年3月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:<br>
+        <strong>冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物の系統発生におけるふるえの進化―</strong>,<br>
+        第3回環境生理プレコングレス, 2007年3月.
+      </li>
+      <li class="pub pub-add-info">
+        <span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:<br>
+        <strong>冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物における恒温性の起源か？―</strong>,<br>
+        体温調節，温度受容研究会, 2007年1月.
+      </li>
+    </ol>
+
+    <h3 class="pub-header">学位論文</h3>
+    <div class="prof-each">
+      杉山 麿人,<br>
+      <strong>Studies on Computational Learning via Discretization</strong>
+      <div class="thesis">
+        <a href="files/Sugiyama_PhDthesis.pdf" title="PhDthesis"><span class="label label-info">PDF</span></a>
+      </div>
+      <div class="thesis">
+        <a href="files/Sugiyama_PhDpresen.pdf" title="PhDpresen"><span class="label label-info">SLIDE</span></a>
+      </div>
+      <br>
+      博士論文, 京都大学情報学研究科, 2012年3月.
+    </div>
+    <div class="prof-each">
+      杉山 麿人,<br>
+      <strong>Cooling-induced Shivering-like Response in Zebrafish</strong><br>
+      修士論文, 京都大学情報学研究科, 2008年3月.
+    </div>
+    <div class="prof-each">
+      杉山 麿人,<br>
+      <strong>実数のグレイコード表現とモデル推論を利用した実数値関数の学習</strong>,<br>
+      特別研究報告書（卒業論文），京都大学工学部情報学科, 2006年3月.
+    </div>
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Mahito Sugiyama 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <div class="pop-content">
+
+    <!-- Journals -->
+    <div id="popj5-content">
+      <div class="popTitle">
+        Efficient Network-guided Multi-locus Association Mapping with Graph Cut
+      </div>
+      <div class="popContent">
+        @article{Azencott2013ISMB,<br>
+        Author = {Azencott, C.-A. and Grimm, D. and Sugiyama, M. and Kawahara, Y. and Borgwardt, K. M.},<br>
+        Title = {Efficient Network-guided Multi-locus Association Mapping with Graph Cut},<br>
+        Journal = {Bioinformatics},<br>
+        Volume = {XX},<br>
+        Number = {X},<br>
+        Pages = {XX--XX},<br>
+        Year = {2013}}
+      </div>
+    </div>
+    <div id="popj4-content">
+      <div class="popTitle">
+        Semi-Supervised Learning on Closed Set Lattices
+      </div>
+      <div class="popContent">
+        @article{SugiyamaIDA01,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {Semi-Supervised Learning on Closed Set Lattices},<br>
+        Journal = {Intelligent Data Analysis},<br>
+        Volume = {17},<br>
+        Number = {3},<br>
+        Pages = {399--421},<br>
+        Publisher = {IOS Press},<br>
+        Year = {2013}}
+      </div>
+    </div>
+    <div id="popj3-content">
+      <div class="popTitle">
+        Learning Figures with the Hausdorff Metric by Fractals&#151;Towards Computable Binary Classification
+      </div>
+      <div class="popContent">
+        @article{SugiyamaMLJ01,<br>
+        Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},<br>
+        Title = {Learning Figures with the Hausdorff Metric by Fractals---Towards Computable Binary Classification},<br>
+        Journal = {Machine Learning},<br>
+        Volume = {90},<br>
+        Number = {1},<br>
+        Pages = {91--126},<br>
+        Publisher = {Springer},<br>
+        Year = {2013}}
+      </div>
+    </div>
+    <div id="popj2-content">
+      <div class="popTitle">
+        Privacy Preserving Using Dummy Data for Set Operations in Itemset Mining Implemented with ZDDs
+      </div>
+      <div class="popContent">
+        @article{OtakiIEICE01,<br>
+        Author = {Otaki, K. and Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {Privacy Preserving Using Dummy Data for Set Operations in Itemset Mining Implemented with {ZDD}s},<br>
+        Journal = {IEICE Transactions on Information and Systems},<br>
+        Volume = {E95-D},<br>
+        Number = {12},<br>
+        Pages = {3017--3025},<br>
+        Publisher = {IEICE},<br>
+        Year = {2012}}
+      </div>
+    </div>
+    <div id="popj1-content">
+      <div class="popTitle">
+        Semi-Supervised Ligand Finding Using Formal Concept Analysis
+      </div>
+      <div class="popContent">
+        @article{SugiyamaTOM01,<br>
+        Author = {Sugiyama, M. and Imajo, K. and Otaki, K. and Yamamoto, A.},<br>
+        Title = {Semi-Supervised Ligand Finding Using Formal Concept Analysis},<br>
+        Journal = {IPSJ Transactions on Mathematical Modeling and Its Applications (TOM)},<br>
+        Volume = {5},<br>
+        Number = {2},<br>
+        Pages = {39--48},<br>
+        Publisher = {The Information Processing Society of Japan (IPSJ)},<br>
+        Year = {2012}}
+      </div>
+    </div>
+
+    <!-- Conferences -->
+    <div id="popc10-content">
+      <div class="popTitle">
+        Measuring Statistical Dependence via the Mutual Information Dimension
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2013IJCAI,<br>
+        Author = {Sugiyama, M. and Borgwardt, K. M.},<br>
+        Title = {Measuring Statistical Dependence via the Mutual Information Dimension},<br>
+        Booktitle = {Proceedings of the 23rd International Joint Conference on Artificial Intelligence (IJCAI 2013)},<br>
+        Pages = {XX--XX},<br>
+        Address = {Beijing, China},<br>
+        Month = {August},<br>
+        Year = {2013}}
+      </div>
+    </div>
+    <div id="popc9-content">
+      <div class="popTitle">
+        A Fast and Flexible Clustering Algorithm Using Binary Discretization
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2011ICDM,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {A Fast and Flexible Clustering Algorithm Using Binary Discretization},<br>
+        Booktitle = {Proceedings of the 2011 IEEE International Conference on Data Mining (ICDM 2011)},<br>
+        Pages = {1212--1217},<br>
+        Address = {Vancouver, Canada},<br>
+        Month = {December},<br>
+        Year = {2011}}
+      </div>
+    </div>
+    <div id="popc8-content">
+      <div class="popTitle">
+        High-throughput Data Stream Classification on Trees
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2011ALSIP,<br>
+        Author = {Sugiyama, M. and Yoshioka, T. and Yamamoto, A.},<br>
+        Title = {High-throughput Data Stream Classification on Trees},<br>
+        Booktitle = {Proceedings of Second Workshop on Algorithms for Large-Scale Information Processing in Knowledge Discovery (ALSIP 2011)},<br>
+        Address = {Kagawa, Japan},<br>
+        Month = {December},<br>
+        Year = {2011}}
+      </div>
+    </div>
+    <div id="popc7-content">
+      <div class="popTitle">
+        The Minimum Code Length for Clustering Using the Gray Code
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2011ECML,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {The Minimum Code Length for Clustering Using the {G}ray Code},<br>
+        Editor = {Gunopulos, D. and Hofmann, T. and Malerba, D. and Vazirgiannis, M.},<br>
+        Booktitle = {Machine Learning and Knowledge Discovery in Databases},<br>
+        Series = {Lecture Notes in Computer Science},<br>
+        Volume = {6913},<br>
+        Pages = {365--380},<br>
+        Publisher = {Springer},<br>
+        Year = {2011}}
+      </div>
+    </div>
+    <div id="popc6-content">
+      <div class="popTitle">
+        Semi-Supervised Learning for Mixed-Type Data via Formal Concept Analysis
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2011ICCS,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {Semi-Supervised Learning for Mixed-Type Data via Formal Concept Analysis},<br>
+        Editor = {Andrews, S. and Polovina, S. and Hill, R. and Akhgar, B.},<br>
+        Booktitle = {Conceptual Structures for Discovering Knowledge},<br>
+        Series = {Lecture Notes in Computer Science},<br>
+        Volume = {6828},<br>
+        Pages = {284--297},<br>
+        Publisher = {Springer},<br>
+        Year = {2011}}
+      </div>
+    </div>
+    <div id="popc5-content">
+      <div class="popTitle">
+        Fast Clustering Based on the Gray-Code
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2011LLLL,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {Fast Clustering Based on the {G}ray-Code},<br>
+        Booktitle = {Proceedings of 7th Workshop on Learning with Logics and Logics for Learning (LLLL2011)},<br>
+        Pages = {42},<br>
+        Address = {Osaka, Japan},<br>
+        Month = {March},<br>
+        Year = {2011}}
+      </div>
+    </div>
+    <div id="popc4-content">
+      <div class="popTitle">
+        The Coding Divergence for Measuring the Complexity of Separating Two Sets
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2010ACML,<br>
+        Author = {Sugiyama, M. and Yamamoto, A.},<br>
+        Title = {The Coding Divergence for Measuring the Complexity of Separating Two Sets},<br>
+        Editor = {Sugiyama, M. and Yang, Q.},<br>
+        Booktitle = {Proceedings of 2nd Asian Conference on Machine Learning (ACML2010)},<br>
+        Series = {JMLR Workshop and Conference Proceedings},<br>
+        Volume = {13},<br>
+        Pages = {127--143},<br>
+        Address = {Tokyo, Japan},<br>
+        Month = {November},<br>
+        Year = {2010}}
+      </div>
+    </div>
+    <div id="popc3-content">
+      <div class="popTitle">
+        Learning Figures with the Hausdorff Metric by Fractals        
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2010ALT,<br>
+        Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},<br>
+        Title = {Learning Figures with the {H}ausdorff Metric by Fractals},<br>
+        Editor = {Hutter, M. and Stephan, F. and Vovk, V. and Zeugmann, T.},<br>
+        Booktitle = {Algorithmic Learning Theory},<br>
+        Series = {Lecture Notes in Computer Science},<br>
+        Volume = {6331},<br>
+        Pages = {315--329},<br>
+        Publisher = {Springer},<br>
+        Year = {2010}}
+      </div>
+    </div>
+    <div id="popc2-content">
+      <div class="popTitle">
+        Learning Figures with the Hausdorff Metric by Self-similar Sets
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2009LLLL,<br>
+        Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},<br>
+        Title = {Learning Figures with the {H}ausdorff Metric by Self-similar Sets},<br>
+        Booktitle = {Proceedings of 6th Workshop on Learning with Logics and Logics for Learning (LLLL2009)},<br>
+        Pages = {27--34},<br>
+        Address = {Kyoto, Japan},<br>
+        Month = {July},<br>
+        Year = {2009}}
+      </div>
+    </div>
+    <div id="popc1-content">
+      <div class="popTitle">
+        Learning from Real-Valued Data with the Model Inference Mechanism through the Gray-Code Embedding        
+      </div>
+      <div class="popContent">
+        @inproceedings{Sugiyama2006LLLL,<br>
+        Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},<br>
+        Title = {Learning from Real-Valued Data with the Model Inference Mechanism through the {G}ray-Code Embedding},<br>
+        Booktitle = {Proceedings of 4th Workshop on Learning with Logics and Logics for Learning (LLLL2006)},<br>
+        Pages = {31--37},<br>
+        Address = {Tokyo, Japan},<br>
+        Month = {June},<br>
+        Year = {2006}}
+      </div>
+    </div>
+  </div>
+
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/myjs.js"></script>
+  <!-- Analytics -->
+  <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30526401-1']);
   _gaq.push(['_trackPageview']);
@@ -24,786 +626,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
   </script>
-</head>
-<body id="onecolumn">
-  <div id="container">
-    <div id="header">
-      <div id="g_title">
-        <div id="selectLang">
-          <p>Japanese / <a href="./publications_e.html">English</a></p>
-        </div>
-        <p><img id="titleImage" src="./Images/nameDesign.png" alt="杉山 麿人" title="杉山 麿人" /></p>
-      </div>
-    </div>
-    <div id="sidebar">
-      <p><a href="./index.html">Top</a></p>
-      <p><a href="./about.html">自己紹介</a></p>
-      <p>研究業績 &gt;</p>
-      <p><a href="./materials.html">講義資料</a></p>
-      <hr />
-      <div id="link">
-        <p><a href="http://www.scribd.com/hito_maro">Scribd</a></p>
-        <p><a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></p>
-        <p><a href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></p>        
-      </div>
-    </div>
-    <div id="main-content">
-      <h3>著書</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p>小林 茂夫, <span class="myname">杉山 麿人</span>:</p>
-              <p><span class="pubtitle">生命科学研究に成功するための統計法ノート</span>,</p>
-              <p>講談社, 2009年4月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@book{Kobayashi2009Life,</p>
-                    <p>Author = {小林 茂夫 and 杉山 麿人},</p>
-                    <p>Yomi = {Shigeo Kobayashi and Mahito Sugiyama},</p>
-                    <p>Title = {生命科学研究に成功するための統計法ノート},</p>
-                    <p>Publisher = {講談社},</p>
-                    <p>Month = {4月},</p>
-                    <p>Year = 2009}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>学術雑誌</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">Semi-Supervised Learning on Closed Set Lattices</span>,</p>
-              <p><span class="bookname"><a href="http://www.iospress.nl/journal/intelligent-data-analysis/">Intelligent Data Analysis</a></span>, 17(3), 2013, in press</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@article{SugiyamaIDA01,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {Semi-Supervised Learning on Closed Set Lattices},</p>
-                    <p>Journal = {Intelligent Data Analysis},</p>
-                    <p>Volume = {17},</p>
-                    <p>Number = {3},</p>
-                    <p>Pages = {XX--XX},</p>
-                    <p>Publisher = {IOS Press},</p>
-                    <p>Year = 2013}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Learning Figures with the Hausdorff Metric by Fractals&#151;Towards Computable Binary Classification</span>,</p>
-              <p><span class="bookname"><a href="http://www.springer.com/computer/ai/journal/10994">Machine Learning</a></span>, 90(1), 91-126, 2013 [DOI: <a href="http://dx.doi.org/10.1007/s10994-012-5301-z">10.1007/s10994-012-5301-z</a>] <a href="./Files/Sugiyama_MLJ01.pdf" title="MLJ01">[PDF (draft)]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@article{SugiyamaMLJ01,</p>
-                    <p>Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},</p>
-                    <p>Title = {Learning Figures with the Hausdorff Metric by Fractals---Towards Computable Binary Classification},</p>
-                    <p>Journal = {Machine Learning},</p>
-                    <p>Volume = {90},</p>
-                    <p>Number = {1},</p>
-                    <p>Pages = {91--126},</p>
-                    <p>Publisher = {Springer},</p>
-                    <p>Year = 2013}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p>Otaki, K., <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">Privacy Preserving Using Dummy Data for Set Operations in Itemset Mining Implemented with ZDDs</span>,</p>
-              <p><span class="bookname"><a href="http://search.ieice.org/bin/index.php?category=D&amp;lang=E;&amp;curr=1;">IEICE TRANSACTIONS on Information and Systems</a></span>, E95-D(12), 3017-3025, 2012</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@article{OtakiIEICE01,</p>
-                    <p>Author = {Otaki, K. and Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {Privacy Preserving Using Dummy Data for Set Operations in Itemset Mining Implemented with {ZDD}s},</p>
-                    <p>Journal = {IEICE TRANSACTIONS on Information and Systems},</p>
-                    <p>Volume = {E95-D},</p>
-                    <p>Number = {12},</p>
-                    <p>Pages = {3017--3025},</p>
-                    <p>Publisher = {IEICE},</p>
-                    <p>Year = 2012}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Semi-Supervised Ligand Finding Using Formal Concept Analysis</span>,</p>
-              <p><span class="bookname">IPSJ TOM</span>, 5(2), 39-48, 2012 [DOI: <a href="http://dx.doi.org/10.2197/ipsjtrans.5.114">10.2197/ipsjtrans.5.114</a>] <a href="https://www.jstage.jst.go.jp/article/ipsjtrans/5/0/5_114/_pdf">[PDF (reprint)]</a> </p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@article{SugiyamaMPS01,</p>
-                    <p>Author = {Sugiyama, M. and Imajo, K. and Otaki, K. and Yamamoto, A.},</p>
-                    <p>Title = {Semi-Supervised Ligand Finding Using Formal Concept Analysis},</p>
-                    <p>Journal = {IPSJ Transactions on Mathematical Modeling and Its Applications (TOM)},</p>
-                    <p>Volume = {5},</p>
-                    <p>Number = {2},</p>
-                    <p>Pages = {39--48},</p>
-                    <p>Publisher = {The Information Processing Society of Japan (IPSJ)},</p>
-                    <p>Year = 2012}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>国際会議（査読付）</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Borgwardt, K. M.:</p>
-              <p><span class="pubtitle">Measuring Statistical Dependence via the Mutual Information Dimension</span>,</p>
-              <p><a href="http://ijcai13.org/">IJCAI 2013</a>, accepted</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2013IJCAI,</p>
-                    <p>Author = {Sugiyama, M. and Borgwardt, K. M.},</p>
-                    <p>Title = {Measuring Statistical Dependence via the Mutual Information Dimension},</p>
-                    <p>Booktitle = {Proceedings of the 23rd International Joint Conference on Artificial Intelligence (IJCAI 2013)},</p>
-                    <p>Pages = {XX--XX},</p>
-                    <p>Address = {Beijing, China},</p>
-                    <p>Month = {August},</p>
-                    <p>Year = 2013}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">A Fast and Flexible Clustering Algorithm Using Binary Discretization</span>,</p>
-              <p><a href="http://icdm2011.cs.ualberta.ca/">IEEE ICDM 2011</a> [DOI: <a href="http://dx.doi.org/10.1109/ICDM.2011.9">10.1109/ICDM.2011.9</a>] <a href="http://www.scribd.com/doc/75716601/A-Fast-and-Flexible-Clustering-Algorithm-Using-Binary-Discretization" title="ICDM2011(Scribd)">[SLIDE (in Scribd)]</a> <a href="./Files/Sugiyama_ICDM2011.pdf" title="ICDM2011">[SLIDE]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011ICDM,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {A Fast and Flexible Clustering Algorithm Using Binary Discretization},</p>
-                    <p>Booktitle = {Proceedings of the 2011 IEEE International Conference on Data Mining (ICDM 2011)},</p>
-                    <p>Pages = {1212--1217},</p>
-                    <p>Address = {Vancouver, Canada},</p>
-                    <p>Month = {December},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yoshioka, T., Yamamoto, A.:</p>
-              <p><span class="pubtitle">High-throughput Data Stream Classification on Trees</span>,</p>
-              <p><a href="http://www-erato.ist.hokudai.ac.jp/alsip2011/index.html">ALSIP 2011</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011ALSIP,</p>
-                    <p>Author = {Sugiyama, M. and Yoshioka, T. and Yamamoto, A.},</p>
-                    <p>Title = {High-throughput Data Stream Classification on Trees},</p>
-                    <p>Booktitle = {Proceedings of Second Workshop on Algorithms for Large-Scale Information Processing in Knowledge Discovery (ALSIP 2011)},</p>
-                    <p>Pages = {XX--XX},</p>
-                    <p>Address = {Kagawa, Japan},</p>
-                    <p>Month = {December},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">The Minimum Code Length for Clustering Using the Gray Code</span>,</p>
-              <p><a href="http://www.ecmlpkdd2011.org/index.php">ECML PKDD 2011</a> (<a href="http://www.springerlink.com/content/f81574811gv60013/" title="ECMLPKDD2011">LNCS 6913</a>) [DOI: <a href="http://dx.doi.org/10.1007/978-3-642-23808-6_24">10.1007/978-3-642-23808-6_24</a>] <a href="http://www.scribd.com/doc/75596284/The-Minimum-Code-Length-for-Clustering-Using-the-Gray-Code" title="ECMLPKDD2011(Scribd)">[SLIDE (in Scribd)]</a> <a href="./Files/Sugiyama_ECMLPKDD2011.pdf" title="ECMLPKDD2011">[SLIDE]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011ECML,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {The Minimum Code Length for Clustering Using the Gray Code},</p>
-                    <p>Editor = {Gunopulos, D. and Hofmann, T. and Malerba, D. and Vazirgiannis, M.},</p>
-                    <p>Booktitle = {Machine Learning and Knowledge Discovery in Databases},</p>
-                    <p>Series = {Lecture Notes in Computer Science},</p>
-                    <p>Volume = {6913},</p>
-                    <p>Pages = {365--380},</p>
-                    <p>Publisher = {Springer},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">Semi-Supervised Learning for Mixed-Type Data via Formal Concept Analysis</span>,</p>
-              <p><a href="http://www.informatik.uni-trier.de/~ley/db/conf/iccs/">ICCS 2011</a> (<a href="http://www.springerlink.com/content/hn6658x0k7716p04/" title="ICCS2011">LNCS 6828</a>) [DOI: <a href="http://dx.doi.org/10.1007/978-3-642-22688-5_21">10.1007/978-3-642-22688-5_21</a>] <a href="./Files/Sugiyama_ICCS2011.pdf" title="ICCS2011">[SLIDE]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011ICCS,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {Semi-Supervised Learning for Mixed-Type Data via Formal Concept Analysis},</p>
-                    <p>Editor = {Andrews, S. and Polovina, S. and Hill, R. and Akhgar, B.},</p>
-                    <p>Booktitle = {Conceptual Structures for Discovering Knowledge},</p>
-                    <p>Series = {Lecture Notes in Computer Science},</p>
-                    <p>Volume = {6828},</p>
-                    <p>Pages = {284--297},</p>
-                    <p>Publisher = {Springer},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">Fast Clustering Based on the Gray-Code</span>,</p>
-              <p><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL2011/">LLLL 2011</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011LLLL,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {Fast Clustering Based on the Gray-Code},</p>
-                    <p>Booktitle = {Proceedings of 7th Workshop on Learning with Logics and Logics for Learning (LLLL2011)},</p>
-                    <p>Pages = {42},</p>
-                    <p>Address = {Osaka, Japan},</p>
-                    <p>Month = {March},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">The Coding Divergence for Measuring the Complexity of Separating Two Sets</span>,</p>
-              <p><a href="http://sugiyama-www.cs.titech.ac.jp/ACML2010/">ACML 2010</a> (<a href="http://jmlr.csail.mit.edu/proceedings/papers/v13/">JMLR Workshop and Conference Proceedings 13</a>) <a href="http://jmlr.csail.mit.edu/proceedings/papers/v13/sugiyama10b/sugiyama10b.pdf" title="ACML2010">[PDF]</a> <a href="./Files/Sugiyama_ACML2010.pdf" title="ACML2010">[SLIDE]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010ACML,</p>
-                    <p>Author = {Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {The Coding Divergence for Measuring the Complexity of Separating Two Sets},</p>
-                    <p>Editor = {Sugiyama, M. and Yang, Q.},</p>
-                    <p>Booktitle = {Proceedings of 2nd Asian Conference on Machine Learning (ACML2010)},</p>
-                    <p>Series = {JMLR Workshop and Conference Proceedings},</p>
-                    <p>Volume = {13},</p>
-                    <p>Pages = {127--143},</p>
-                    <p>Address = {Tokyo, Japan},</p>
-                    <p>Month = {November},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Learning Figures with the Hausdorff Metric by Fractals</span>,</p>
-              <p><a href="http://www-alg.ist.hokudai.ac.jp/~thomas/ALT10/alt10.jhtml">ALT</a> (<a href="http://www.springerlink.com/content/p142346471g1117r/" title="ALT2010">LNCS 6331</a>) [DOI: <a href="http://dx.doi.org/10.1007/978-3-642-16108-7_26">10.1007/978-3-642-16108-7_26</a>] <a href="./Files/Sugiyama_ALT2010.pdf" title="ALT2010">[SLIDE]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010ALT,</p>
-                    <p>Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},</p>
-                    <p>Title = {Learning Figures with the {H}ausdorff Metric by Fractals},</p>
-                    <p>Editor = {Hutter, M. and Stephan, F. and Vovk, V. and Zeugmann, T.},</p>
-                    <p>Booktitle = {Algorithmic Learning Theory},</p>
-                    <p>Series = {Lecture Notes in Computer Science},</p>
-                    <p>Volume = {6331},</p>
-                    <p>Pages = {315--329},</p>
-                    <p>Publisher = {Springer},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Learning Figures with the Hausdorff Metric by Self-similar Sets</span>,</p>
-              <p><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL09/">LLLL 2009</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2009LLLL,</p>
-                    <p>Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},</p>
-                    <p>Title = {Learning Figures with the {H}ausdorff Metric by Self-similar Sets},</p>
-                    <p>Booktitle = {Proceedings of 6th Workshop on Learning with Logics and Logics for Learning (LLLL2009)},</p>
-                    <p>Pages = {27--34},</p>
-                    <p>Address = {Kyoto, Japan},</p>
-                    <p>Month = {July},</p>
-                    <p>Year = 2009}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Hirowatari, E., Tsuiki, H., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Learning from Real-Valued Data with the Model Inference Mechanism through the Gray-Code Embedding</span>,</p>
-              <p><a href="http://www.iip.ist.i.kyoto-u.ac.jp/LLLL/LLLL06/LLLL2006.html">LLLL 2006</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2006LLLL,</p>
-                    <p>Author = {Sugiyama, M. and Hirowatari, E. and Tsuiki, H. and Yamamoto, A.},</p>
-                    <p>Title = {Learning from Real-Valued Data with the Model Inference Mechanism through the {G}ray-Code Embedding},</p>
-                    <p>Booktitle = {Proceedings of 4th Workshop on Learning with Logics and Logics for Learning (LLLL2006)},</p>
-                    <p>Pages = {31--37},</p>
-                    <p>Address = {Tokyo, Japan},</p>
-                    <p>Month = {June},</p>
-                    <p>Year = 2006}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>国際会議</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Discovering Ligands for TRP Ion Channels Using Formal Concept Analysis</span>,</p>
-              <p><a href="http://ilp11.doc.ic.ac.uk/">ILP 2011</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011ILP,</p>
-                    <p>Author = {Sugiyama, M. and Imajo, K. and Otaki, K. and Yamamoto, A.},</p>
-                    <p>Title = {Discovering Ligands for {TRP} Ion Channels Using Formal Concept Analysis},</p>
-                    <p>Booktitle = {The 21st International Conference on Inductive Logic Programming (ILP 2011)},</p>
-                    <p>Address = {Windsor Great Park, UK},</p>
-                    <p>Month = {July},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p>Kawai, Y., <span class="myname">Sugiyama, M.</span>, Yamamoto, A.:</p>
-              <p><span class="pubtitle">Mining RNA Families with Structure Histograms</span>,</p>
-              <p><a href="http://ibisml.org/dmss2011/">DMSS 2011</a> <a href="http://ibisml.org/archive/dmss2011/yamamoto.pdf" title="DMSS2011">[PDF]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Kawai2011DMSS,</p>
-                    <p>Author = {Kawai, Y. and Sugiyama, M. and Yamamoto, A.},</p>
-                    <p>Title = {Mining {RNA} Families with Structure Histograms},</p>
-                    <p>Booktitle = {Proceedings of The 5th International Workshop on Data-Mining and Statistical Science (DMSS2011)},</p>
-                    <p>Address = {Osaka, Japan},</p>
-                    <p>Month = {March},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>学会・研究会</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p><span class="myname">Sugiyama, M.</span>, Imajo, K., Otaki, K., Yamamoto, A.:</p>
-              <p><span class="pubtitle">Semi-Supervised Ligand Finding Using Formal Concept Analysis</span>,</p>
-              <p><a href="http://www.ipsj.or.jp/kenkyukai/event/mps86bio27.html">第86回MPS・第27回BIO合同研究発表会</a>, IPSJ SIG Technical Report, vol.2011-MPS-86, no.28, 2011年12月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011MPS,</p>
-                    <p>Author = {Sugiyama, M. and Imajo, K. and Otaki, K. and Yamamoto, A.},</p>
-                    <p>Title = {Semi-Supervised Ligand Finding Using Formal Concept Analysis},</p>
-                    <p>Booktitle = {IPSJ SIG Technical Report},</p>
-                    <p>Volume = {2011-MPS-86},</p>
-                    <p>Number = {28},</p>
-                    <p>Month = {12月},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle"><a href="https://kaigi.org/jsai/webprogram/2011/paper-535.html">2進符号化を活用した高速かつ柔軟なクラスタリング</a></span>,</p>
-              <p><a href="http://www.ai-gakkai.or.jp/jsai/conf/2011/">第25回人工知能学会全国大会</a>, 1P2-lb-3in, 2011年6月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2011JSAI,</p>
-                    <p>Author = {杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {2進符号化を活用した高速かつ柔軟なクラスタリング},</p>
-                    <p>Booktitle = {第25回人工知能学会全国大会},</p>
-                    <p>Series = {1P2-lb-3in},</p>
-                    <p>Month = {6月},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p>秦 亮一, 池田 真土里, <span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle"><a href="http://www.ieice.org/ken/paper/20110329Y0Gu/">質問学習とメタアルゴリズムの組合せによる文字列画像検索</a></span>,</p>
-              <p>信学技報, vol. 110, no. 476, IBISML2010-120, pp. 115-122, 2011年3月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Hata2011IBISML,</p>
-                    <p>Author = {秦 亮一 and 杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Ryoichi Hata and Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {質問学習とメタアルゴリズムの組合せによる文字列画像検索},</p>
-                    <p>Booktitle = {信学技報},</p>
-                    <p>Series = {IBISML2010-120},</p>
-                    <p>Volume = {110},</p>
-                    <p>Number = {476},</p>
-                    <p>Pages = {115--122},</p>
-                    <p>Month = {3月},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p>吉岡 正志, <span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle"><a href="http://www.ieice.org/ken/paper/2011032880Gt/">符号化ダイバージェンスを用いたクラス分類のためのオンラインアルゴリズム</a></span>,</p>
-              <p>信学技報, vol. 110, no. 476, IBISML2010-117, pp. 93-100, 2011年3月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Yoshioka2011IBISML,</p>
-                    <p>Author = {吉岡 正志 and 杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Tadashi Yoshioka and Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {符号化ダイバージェンスを用いたクラス分類のためのオンラインアルゴリズム},</p>
-                    <p>Booktitle = {信学技報},</p>
-                    <p>Series = {IBISML2010-117},</p>
-                    <p>Volume = {110},</p>
-                    <p>Number = {476},</p>
-                    <p>Pages = {93--100},</p>
-                    <p>Month = {3月},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p>福村 貴志, <span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle"><a href="http://www.ieice.org/ken/paper/20110328r0Gu/">木構造を利用した自然画像の部分領域検索とフラクタル圧縮・マイニングへの応用</a></span>,</p>
-              <p>信学技報, vol. 110, no. 476, IBISML2010-112, pp. 55-62, 2011年3月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Fukumura2011IBISML,</p>
-                    <p>Author = {福村 貴志 and 杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Takashi Fukumura and Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {木構造を利用した自然画像の部分領域検索とフラクタル圧縮・マイニングへの応用},</p>
-                    <p>Booktitle = {信学技報},</p>
-                    <p>Series = {IBISML2010-112},</p>
-                    <p>Volume = {110},</p>
-                    <p>Number = {476},</p>
-                    <p>Pages = {55--62},</p>
-                    <p>Month = {3月},</p>
-                    <p>Year = 2011}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle">離散量と連続量が混在するデータに対する形式概念分析を用いた半教師あり学習</span>,</p>
-              <p><a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai80.html">第80回人工知能基本問題研究会</a>資料, SIG-FPAI-B003, pp. 7-14, 2010年11月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010FPAI_3,</p>
-                    <p>Author = {杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {離散量と連続量が混在するデータに対する形式概念分析を用いた半教師あり学習},</p>
-                    <p>Booktitle = {第80回人工知能基本問題研究会資料},</p>
-                    <p>Series = {SIG-FPAI-B003},</p>
-                    <p>Pages = {7--14},</p>
-                    <p>Month = {11月},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle">グレイ符号化ダイバージェンスによる連続データからの計算論的知識発見</span>,</p>
-              <p><a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai78.html">第78回人工知能基本問題研究会</a>資料, SIG-FPAI-B001-03, pp. 17-24, 2010年7月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010FPAI_2,</p>
-                    <p>Author = {杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {グレイ符号化ダイバージェンスによる連続データからの計算論的知識発見},</p>
-                    <p>Booktitle = {第78回人工知能基本問題研究会資料},</p>
-                    <p>Series = {SIG-FPAI-B001},</p>
-                    <p>Pages = {17--24},</p>
-                    <p>Month = {7月},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle"><a href="http://www.ieice.org/ken/paper/20100615HazE/">符号化ダイバージェンスによる2つの集合の異なり具合の定量化</a></span>,</p>
-              <p>信学技報, vol. 110, no. 76, IBISML2010-26, pp. 181-187, 2010年6月. <a href="http://ibisml.org/001/">[SLIDE (IBISML site)]</a></p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010IBISML,</p>
-                    <p>Author = {杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {符号化ダイバージェンスによる2つの集合の異なり具合の定量化},</p>
-                    <p>Booktitle = {信学技報},</p>
-                    <p>Series = {IBISML2010-26},</p>
-                    <p>Volume = {110},</p>
-                    <p>Number = {76},</p>
-                    <p>Pages = {181--187},</p>
-                    <p>Month = {6月},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 山本 章博:</p>
-              <p><span class="pubtitle">計算論的学習理論に基づく統計的仮説検定の代替手法</span>,</p>
-              <p><a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai77.html">第77回人工知能基本問題研究会</a>資料, SIG-FPAI-A904, pp. 43-48, 2010年3月.</p>
-              <p>（<a href="http://www.ai-gakkai.or.jp/jsai/info/award-sig.html#INCENTIVE">2009年度 人工知能学会 研究会優秀賞</a>）</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2010FPAI_1,</p>
-                    <p>Author = {杉山 麿人 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Akihiro Yamamoto},</p>
-                    <p>Title = {計算論的学習理論に基づく統計的仮説検定の代替手法},</p>
-                    <p>Booktitle = {第77回人工知能基本問題研究会資料},</p>
-                    <p>Series = {SIG-FPAI-A904},</p>
-                    <p>Pages = {43--48},</p>
-                    <p>Month = {3月},</p>
-                    <p>Year = 2010}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 廣渡 栄寿, 立木 秀樹, 山本 章博:</p>
-              <p><span class="pubtitle">ハウスドルフ距離を用いたフラクタルによる図形の学習</span>,</p>
-              <p><a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai74.html">第74回人工知能基本問題研究会</a>資料, SIG-FPAI-A901, pp. 31-38, 2009年9月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2009FPAI,</p>
-                    <p>Author = {杉山 麿人 and 廣渡 栄寿 and 立木 秀樹 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Eiju Hirowatari and Hideki Tsuiki and Akihiro Yamamoto},</p>
-                    <p>Title = {ハウスドルフ距離を用いたフラクタルによる図形の学習},</p>
-                    <p>Booktitle = {第74回人工知能基本問題研究会資料},</p>
-                    <p>Series = {SIG-FPAI-A901},</p>
-                    <p>Pages = {31--38},</p>
-                    <p>Month = {9月},</p>
-                    <p>Year = 2009}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 廣渡 栄寿, 立木 秀樹, 山本 章博:</p>
-              <p><span class="pubtitle">グレイコードとモデル推論を利用した実数値関数の学習</span>,</p>
-              <p><a href="http://www.dumbo.ai.kyutech.ac.jp/sigfpai/past/fpai62.html">第62回人工知能基本問題研究会</a>資料, SIG-FPAI-A504, pp. 47-54, 2006年3月.</p>
-              <dl class="accordion">
-                <dt>&gt;&nbsp;BibTeX Record</dt>
-                <dd>
-                  <div class="bib">
-                    <p>@inproceedings{Sugiyama2006FPAI,</p>
-                    <p>Author = {杉山 麿人 and 廣渡 栄寿 and 立木 秀樹 and 山本 章博},</p>
-                    <p>Yomi = {Mahito Sugiyama and Eiju Hirowatari and Hideki Tsuiki and Akihiro Yamamoto},</p>
-                    <p>Title = {グレイコードとモデル推論を利用した実数値関数の学習},</p>
-                    <p>Booktitle = {第62回人工知能基本問題研究会資料},</p>
-                    <p>Series = {SIG-FPAI-A504},</p>
-                    <p>Pages = {47--54},</p>
-                    <p>Month = {3月},</p>
-                    <p>Year = 2006}</p>
-                  </div>
-                </dd>
-              </dl>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>口頭発表</h3>
-      <div class="pub_body">
-        <ol class="reversed">
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>:</p>
-              <p><span class="pubtitle">Learning Figures with the Hausdorff Metric by Self-similar Sets</span>,</p>
-              <p>SLACS 2009, 2009年8月.</p>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 細川 浩, 前川 真吾, 小林 茂夫:</p>
-              <p><span class="pubtitle">ゼブラフィッシュが持つ自律性体温調節システム</span>,</p>
-              <p>第85回日本生理学会大会, 2008年3月.</p>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:</p>
-              <p><span class="pubtitle">冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物における恒温性の起源</span>,</p>
-              <p>第84回日本生理学会大会, 2007年3月.</p>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:</p>
-              <p><span class="pubtitle">冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物の系統発生におけるふるえの進化―</span>,</p>
-              <p>第3回環境生理プレコングレス, 2007年3月.</p>
-            </div>
-          </li>
-          <li>
-            <div class="pub">
-              <p><span class="myname">杉山 麿人</span>, 細川 浩, 久枝 宏, 小林 茂夫:</p>
-              <p><span class="pubtitle">冷刺激が誘発するゼブラフィッシュ稚魚のふるえ ―脊椎動物における恒温性の起源か？―</span>,</p>
-              <p>体温調節，温度受容研究会, 2007年1月.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <h3>学位論文</h3>
-      <div class="pub_body">
-        <div class="pub">
-          <p>杉山 麿人,</p>
-          <p><span class="pubtitle">Studies on Computational Learning via Discretization</span>,</p>
-          <p>博士論文, 京都大学情報学研究科, 2012年3月.</p>
-          <p><a href="./Files/Sugiyama_PhDthesis.pdf" title="PhDthesis">[PDF]</a> <a href="./Files/Sugiyama_PhDpresen.pdf" title="PhDpresen">[SLIDE]</a></p>
-        </div>
-        <div class="pub">
-          <p>杉山 麿人,</p>
-          <p><span class="pubtitle">Cooling-induced Shivering-like Response in Zebrafish</span>,</p>
-          <p>修士論文, 京都大学情報学研究科, 2008年3月.</p>
-        </div>
-        <div class="pub">
-          <p>杉山 麿人,</p>
-          <p><span class="pubtitle">実数のグレイコード表現とモデル推論を利用した実数値関数の学習</span>,</p>
-          <p>特別研究報告書（卒業論文），京都大学工学部情報学科, 2006年3月.</p>
-        </div>
-      </div>
-      <h3>その他</h3>
-      <div class="pub_body">
-        <div class="pub">
-          <p>杉山 麿人:</p>
-          <p><span class="pubtitle">グレイ符号化ダイバージェンスによる連続データからの計算論的知識発見</span>,</p>
-          <p><a href="http://www-erato.ist.hokudai.ac.jp/symposium/seminar5.html">鷲尾研・ERATO合同セミナ</a>, 2010年9月. <a href="http://www-erato.ist.hokudai.ac.jp/symposium/seminar5.html">[SLIDE (ERATO site)]</a></p>
-        </div>
-        <div class="pub">
-          <p>杉山 麿人, Matthew de Brecht:</p>
-          <p><span class="pubtitle">学習の位相的計算理論とそのグラフィカルなモデル化</span>,</p>
-          <p><a href="http://ict-nw.i.kyoto-u.ac.jp/ict-innovation/2010/">京都大学ICTイノベーション2010</a>, 2010年2月. <a href="http://ict-nw.i.kyoto-u.ac.jp/ict-innovation/2010/panel/index.php">[Abstract (ICT site)]</a></p>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div id="validCheck">
-        <p>
-          <a href="http://validator.w3.org/check?uri=referer">
-            <img src="./Images/valid-xhtml10.png" alt="Valid XHTML 1.0" height="31" width="88" />
-          </a>&nbsp;
-          <a href="http://jigsaw.w3.org/css-validator/check/referer">
-            <img src="./Images/vcss.png" alt="Valid CSS!" height="31" width="88" />
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</body>
+
+  </body>
 </html>

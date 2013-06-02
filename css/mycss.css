@@ -1,0 +1,110 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-family: "Lucida Grande", "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container-fluid {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.container-fluid > hr {
+  margin: 20px 0;
+}
+.intro {
+  padding: 30px 30px 0px 30px;
+}
+.lead {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.lead-en {
+  font-size: 18px;
+}
+.lead-jp {
+  font-size: 16px;
+}
+li.pub {
+  margin-bottom: 5px;
+}
+.myname {
+  text-decoration: underline;
+}
+.dl-horizontal.news dt {
+  width: 90px;
+}
+.dl-horizontal.news dd {
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+.popover {
+  max-width: 600px;
+}
+.pop-content {
+  display: none;
+}
+.bibtex {
+  color: #0088cc;
+  color: #5a5a5a;
+  cursor: pointer;
+  line-height: 0px;
+}
+.bibtex:hover,
+.bibtex:focus {
+  color: #005580;
+}
+.pub-each {
+  padding-bottom: 20px;
+}
+.pub-header {
+  color: #5a5a5a;
+}
+.pub-header-top {
+  padding-top: 20px;
+}
+.news-header {
+  color: #5a5a5a;
+}
+.prof-each {
+  padding-bottom: 20px;
+}
+.prof-each-bar {
+  padding-bottom: 10px;
+}
+.thesis {
+  display: inline-block;
+  margin-left: 10px;
+}
+.dl-horizontal.biosketch dt {
+  width: 120px;
+}
+.dl-horizontal.biosketch dd {
+  margin-left: 140px;
+}
+.pub-link {
+  display: inline-block;
+}
+.language {
+  width: 25%;
+  text-align: right;
+}
+.language-en {
+  margin-left: 10px;
+}
+.menu {
+  width: 75%;
+}
+.contents-top {
+  margin-top: 30px;
+}
+/*
+.nav {
+  padding-top: 15px;
+}
+*/
+
+.pub-add {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.pub-add-info {
+  padding-bottom: 5px;
+}
