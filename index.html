@@ -19,51 +19,42 @@
 
   <div class="container-fluid">
 
-    <div class="masthead header">
-      <ul class="pull-right language">
-        <p class="btn btn-success disabled">Japanese</p>
-        <a href="index_e.html" class="btn btn-success language-en">English</a>
-      </ul>
-      <div class="navbar menu">
-        <div class="navbar-inner">
-          <div class="container">
-            <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="about.html">自己紹介</a></li>
-              <!-- <li><a href="#">研究</a></li> -->
-              <li><a href="publications.html">研究業績</a></li>
-              <li><a href="materials.html">講義資料</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
-                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop-link">
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
-                  <li role="presentation" class="divider"></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <ul class="mymenu">
+      <li class="item disabled"><a href="index.html">Home</a></li>
+      <li class="item"><a href="about.html">自己紹介</a></li>
+      <!-- <li><a href="research.html">Research</a></li> -->
+      <li class="item"><a href="publications.html">研究業績</a></li>
+      <li class="item"><a href="materials.html">講義資料</a></li>
+
+      <li class="item dropdown">
+        <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/mahito-sugiyama">GitHub</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+        </ul>
+      </li>
+
+      <div class="lang">
+	<li class="item disabled"><a href="index.html">Japanese</a></li>
+	<li class="item lang-cl"><a href="index_e.html">English</a></li>
       </div>
-    </div>
+    </ul>
 
     <h2 class="contents-top">杉山 麿人</h2>
-    <div class="intro">
-      <div class="row-fluid">
-        <div class="span8">
-          <p class="lead lead-jp">
-            ドイツのマックスプランク研究所で，ポスドク研究員として計算機科学の研究をしています．
-            専門分野は人工知能です．特に，機械学習や知識発見，データマイニングと呼ばれる分野を研究しています．
-            主に計算論的・離散的なアプローチで，学習の基礎理論から応用までに取り組んでいます．
-          </p>
-        </div>
-        <div class="span4">
-          <p class="text-center"><script type="text/JavaScript" src="./js/manga.js"></script></p>
-          <noscript><p class="text-center"><img src="./img/Manga_08.png" alt="Manga"></p></noscript>
-        </div>
+
+    <div class="row-fluid">
+      <div class="intro-img">
+	<script type="text/JavaScript" src="./js/manga.js"></script>
+	<noscript><img src="./img/Manga_08.png" alt="Manga"></noscript>
       </div>
+      <p class="intro-text">
+	ドイツのマックスプランク研究所で，ポスドク研究員として計算機科学の研究をしています．
+        特に，機械学習や知識発見，データマイニングと呼ばれる分野を研究しています．
+        主に計算論的・離散的なアプローチによる新しい手法の開発に取り組んでいます．
+      </p>
     </div>
 
     <h3 class="news-header">News</h3>
