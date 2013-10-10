@@ -141,15 +141,13 @@ li.pub {
   cursor: default;
   background-color: #fff;
 }
+
+.mymenu .menuitem {
+  float: left;
+}
+
 .mymenu .lang {
   float: right;
-}
-.mymenu:after {
-  content: "";
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
 }
 .mymenu li.lang-cl > a {
   color: #5bb75b;
@@ -158,6 +156,15 @@ li.pub {
      -moz-border-radius: 15px;
           border-radius: 15px;
 }
+
+.mymenu:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
 .intro-img {
   float: right;
   margin-left: 50px;
