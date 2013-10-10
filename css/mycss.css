@@ -143,7 +143,11 @@ li.pub {
 .mymenu .lang {
   float: right;
 }
-.mymenu .lang-end {
+#mymenu:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
   clear: both;
 }
 .mymenu li.lang-cl > a {
