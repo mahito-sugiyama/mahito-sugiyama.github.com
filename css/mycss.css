@@ -110,6 +110,7 @@ li.pub {
 .mymenu {
   margin: 20px 0;
   list-style: none;
+  max-width: 800px;
   *zoom: 1;
 }
 .mymenu li.item {
