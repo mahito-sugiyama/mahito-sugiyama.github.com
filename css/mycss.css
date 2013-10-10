@@ -143,6 +143,9 @@ li.pub {
 .mymenu .lang {
   float: right;
 }
+.mymenu .lang-end {
+  clear: both;
+}
 .mymenu li.lang-cl > a {
   color: #5bb75b;
   border: 1px solid #5bb75b;
