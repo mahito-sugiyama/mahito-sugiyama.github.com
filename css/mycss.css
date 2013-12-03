@@ -142,11 +142,16 @@ li.pub {
   background-color: #fff;
 }
 
-.mymenu .menuitem {
+.mymenu-left {
+  text-align: left;
   float: left;
+}
+.mymenu-right {
+  text-align: right;
 }
 
 .mymenu .lang {
+  text-align: right;
   float: right;
   margin-left: 5px;
 }
