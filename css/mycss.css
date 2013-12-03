@@ -148,6 +148,7 @@ li.pub {
 
 .mymenu .lang {
   float: right;
+  margin-left: 5px;
 }
 .mymenu li.lang-cl > a {
   color: #5bb75b;
