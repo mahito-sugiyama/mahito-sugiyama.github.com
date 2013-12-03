@@ -178,3 +178,7 @@ li.pub {
   line-height: 30px;
   font-size: 110%;
 }
+
+.nmar {
+  margin-left: 5px;
+}
