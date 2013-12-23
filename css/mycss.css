@@ -94,6 +94,7 @@ li.pub {
 }
 .contents-top {
   margin-top: 50px;
+  clear: both;
 }
 /*
 .nav {
