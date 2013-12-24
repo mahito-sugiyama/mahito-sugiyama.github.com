@@ -143,33 +143,12 @@ li.pub {
   background-color: #fff;
 }
 
-.mymenu-left {
-  text-align: left;
-  float: left;
-}
-.mymenu-right {
-  text-align: right;
-}
-
-.mymenu .lang {
-  text-align: right;
-  float: right;
-  margin-left: 5px;
-}
 .mymenu li.lang-cl > a {
   color: #5bb75b;
   border: 1px solid #5bb75b;
   -webkit-border-radius: 15px;
      -moz-border-radius: 15px;
           border-radius: 15px;
-}
-
-.mymenu:after {
-  content: "";
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
 }
 
 .intro-img {
@@ -187,4 +166,26 @@ li.pub {
 
 .nmar {
   margin-left: 5px;
+}
+
+.menuContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.menuBox {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    box-pack: start;
+}
+.langBox {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
 }
