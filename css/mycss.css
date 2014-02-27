@@ -115,7 +115,7 @@ li.pub {
   padding-bottom: 0px;
 }
 .mymenu {
-  margin: 20px 0px;
+  margin: 20px 0px 10px;
   list-style: none;
   max-width: 800px;
   *zoom: 1;
