@@ -45,11 +45,11 @@
       </ul>
     </div>
 
-    <h2 class="contents-top">R で K-means++ を実装する</h2>
+    <h2 class="contents-top">RでK-means++を実装する</h2>
 
-    <p>R に付属の関数 kmeans を使って，K-means++ を実装します．</p>
+    <p>R に付属の関数 <code>kmeans</code> を使って，K-means++をなるべく高速に実装します．</p>
 
-    <h3 class="pub-header">コード</h3>
+    <h3 class="pub-header" id="kmeansp2">コード</h3>
 
     <script src="https://gist.github.com/mahito-sugiyama/ef54a3b17fff4629f106.js"></script>
 
@@ -61,26 +61,28 @@
 
     <p>
       データ数1,000,000，次元数2，クラスタ数2のデータセットです．<br>
-      また，速度は10回の平均で測りましょう，結果を入れるベクトルを用意しておきます．
+      速度は10回の平均で測ります，結果を入れるベクトルを用意しておきます．
     </p>
 
     <pre>> t <- numeric(10)</pre>
 
-    <p>まずはベースラインとして，普通の K-means です．</p>
+    <p>まずはベースライン．普通のK-meansです．</p>
 
     <pre>
 > for (i in 1:10) t[i] <- system.time(kmeans(x, 2))[1]; mean(t)
 [1] 0.5734</pre>
 
-    <p>次に，私の実装した K-means++ です．</p>
+    <p>次に，上に載せたK-means++です．ここでは，devtoolsライブラリにある<code>source_gist</code>関数で読み込みます．</p>
 
     <pre>
+> install.packages("devtools"); library(devtools)
+> source_gist('ef54a3b17fff4629f106')
 > for (i in 1:10) t[i] <- system.time(kmeansp2(x, 2))[1]; mean(t)
 [1] 0.6614</pre>
 
     <p>
-      初期値を選ぶ際の距離計算の分だけ，少し遅くなっていますが，いい感じです．<br>
-      また，<a href="http://www.inside-r.org/packages/cran/LICORS/docs/kmeanspp">ライブラリ LICORS</a> に K-means++ の実装があります．これを使ってみます．
+      クラスタ中心の初期値を選ぶ際に必要となる距離計算の分だけ，少し遅くなっていますが，いい感じです．<br>
+      また，<a href="http://www.inside-r.org/packages/cran/LICORS/docs/kmeanspp">ライブラリLICORS</a>にK-means++の実装があります．これを使ってみます．
     </p>
 
     <pre>
@@ -89,8 +91,8 @@
 [1] 2.7971</pre>
 
     <p>
-      約4倍遅いです．これは，距離計算がベクトル化されておらず，apply 関数（for文）で実装されているためです．<br>
-      最後に，<a href="https://stat.ethz.ch/pipermail/r-help/2012-January/300051.html">ここで紹介されているコード</a>を試してみます．<a href="http://www.inside-r.org/packages/cran/pracma/docs/pdist">ライブラリ pracma</a> にある distmat 関数で距離計算をしています．
+      約4倍遅いです．これは，距離計算がベクトル化されておらず，<code>apply</code>関数（for文）で実装されているためです．<br>
+      最後に，<a href="https://stat.ethz.ch/pipermail/r-help/2012-January/300051.html">このコード</a>を試してみます．<a href="http://www.inside-r.org/packages/cran/pracma/docs/pdist">ライブラリpracma</a> にある<code>distmat</code>関数を使って距離計算をしています．
     </p>
 
     <pre>
@@ -98,13 +100,13 @@
 > for (i in 1:10) t[i] <- system.time(kmpp(x, 2))[1]; mean(t)
 [1] 4.7541</pre>
 
-    <p>さらに遅くなってしまっていますが，こちらもfor文（apply関数）の使用が原因です．<br>
-      このように，for文を避けて処理をベクトル化することで，R でも高速に処理できます．<br>
-      特に理由が無い限り，R 上で K-means++ を使いたいときにはここで紹介したコードを使うのがベストでしょう．
+    <p>8倍ほど遅くなってしまっています．これもfor文（<code>apply</code>関数）の使用が原因です．<br>
+      このように，for文を避けて処理をベクトル化することで，高速に処理できます．<br>
+      特に理由が無い限り，R上でK-means++を使いたいときには，<a href="#kmeansp2">上で紹介したコード</a>を使うのがベストでしょう．
     </p>
 
     <h3 class="pub-header">参考文献</h3>
-    Arthur, D. and Vassilvitskii, S.: <strong>K-means++: The Advantages of Careful Seeding</strong>, In <em>Proc. of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms</em> (SODA07), 1027-1035 (2007).
+    Arthur, D. and Vassilvitskii, S.: <strong>K-means++: The Advantages of Careful Seeding</strong>, In <em>Proc. of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms</em>, 1027-1035 (2007).
 
     <hr>
 
