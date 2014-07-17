@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Mahito Sugiyama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="杉山麿人のページです．機械学習，データマイニング，知識発見などを計算論的な立場から研究しています．">
+  <meta name="author" content="Mahito Sugiyama">
+  <meta name="keywords" content="計算, 学習, データ, 離散化">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- My style -->
+  <link href="css/mycss.css" rel="stylesheet" media="screen">
+  <!-- Favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="menuContainer">
+      <ul class="menuBox mymenu">
+	<li class="item"><a href="index.html">Home</a></li>
+	<li class="item"><a href="about.html">自己紹介</a></li>
+	<!-- <li><a href="research.html">Research</a></li> -->
+	<li class="item"><a href="publications.html">研究業績</a></li>
+	<li class="item"><a href="materials.html">講義資料</a></li>
+
+	<li class="item dropdown">
+          <a class="dropdown-toggle" id="drop-link" role="button" data-toggle="dropdown" href="#">Links <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop-link">
+	    <li role="presentation"><a role="menuitem" tabindex="0" href="http://arxiv.org/find/all/1/all:+AND+Mahito+Sugiyama/0/1/0/all/0/1">arXiv</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="0" href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/s/Sugiyama:Mahito.html">DBLP</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="0" href="http://scholar.google.com/citations?user=qLlRvTkAAAAJ">Google Scholar Citations</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="0" href="https://github.com/mahito-sugiyama">GitHub</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="0" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+          </ul>
+	</li>
+      </ul>
+      <ul class="langBox mymenu">
+	<li class="item disabled"><a href="about.html">Japanese</a></li>
+	<li class="item lang-cl"><a href="about_e.html">English</a></li>
+      </ul>
+    </div>
+
+    <h2 class="contents-top">R で K-means++ を実装する</h2>
+
+    <p>R に付属の関数 kmeans を使って，K-means++ を実装します．</p>
+
+    <h3 class="pub-header">コード</h3>
+
+    <script src="https://gist.github.com/mahito-sugiyama/ef54a3b17fff4629f106.js"></script>
+
+    <h3 class="pub-header">検証</h3>
+
+    <p>単純な例で比較してみます．まずデータを生成します．</p>
+
+    <pre>> x <- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
+
+    <p>
+      データ数1,000,000，次元数2，クラスタ数2のデータセットです．<br>
+      また，速度は10回の平均で測りましょう，結果を入れるベクトルを用意しておきます．
+    </p>
+
+    <pre>> t <- numeric(10)</pre>
+
+    <p>まずはベースラインとして，普通の K-means です．</p>
+
+    <pre>
+> for (i in 1:10) t[i] <- system.time(kmeans(x, 2))[1]; mean(t)
+[1] 0.5734</pre>
+
+    <p>次に，私の実装した K-means++ です．</p>
+
+    <pre>
+> for (i in 1:10) t[i] <- system.time(kmeansp2(x, 2))[1]; mean(t)
+[1] 0.6614</pre>
+
+    <p>
+      初期値を選ぶ際の距離計算の分だけ，少し遅くなっていますが，いい感じです．<br>
+      また，<a href="http://www.inside-r.org/packages/cran/LICORS/docs/kmeanspp">ライブラリ LICORS</a> に K-means++ の実装があります．これを使ってみます．
+    </p>
+
+    <pre>
+> install.packages("LICORS"); library(LICORS)
+> for (i in 1:10) t[i] <- system.time(kmeanspp(x, 2, nstart = 1))[1]; mean(t)
+[1] 2.7971</pre>
+
+    <p>
+      約4倍遅いです．これは，距離計算がベクトル化されておらず，apply 関数（for文）で実装されているためです．<br>
+      最後に，<a href="https://stat.ethz.ch/pipermail/r-help/2012-January/300051.html">ここで紹介されているコード</a>を試してみます．<a href="http://www.inside-r.org/packages/cran/pracma/docs/pdist">ライブラリ pracma</a> にある distmat 関数で距離計算をしています．
+    </p>
+
+    <pre>
+> install.packages("pracma"); library(pracma)
+> for (i in 1:10) t[i] <- system.time(kmpp(x, 2))[1]; mean(t)
+[1] 4.7541</pre>
+
+    <p>さらに遅くなってしまっていますが，こちらもfor文（apply関数）の使用が原因です．<br>
+      このように，for文を避けて処理をベクトル化することで，R でも高速に処理できます．<br>
+      特に理由が無い限り，R 上で K-means++ を使いたいときにはここで紹介したコードを使うのがベストでしょう．
+    </p>
+
+    <h3 class="pub-header">参考文献</h3>
+    Arthur, D. and Vassilvitskii, S.: <strong>K-means++: The Advantages of Careful Seeding</strong>, In <em>Proc. of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms</em> (SODA07), 1027-1035 (2007).
+
+    <hr>
+
+    <div class="footer">
+      <p>&copy; Mahito Sugiyama 2014</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- javascript -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Analytics -->
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30526401-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+</body>
+</html>
