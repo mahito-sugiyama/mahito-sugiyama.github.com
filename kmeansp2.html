@@ -60,14 +60,14 @@
 
     <p>単純な例で速度を比較してみます．まずデータを生成します．</p>
 
-    <pre>&gt; x <- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
+    <pre>&gt; x &lt;- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
 
     <p>
       データ数1,000,000，次元数2，クラスタ数2のデータセットです．<br>
       速度は10回の平均で測ります，結果を入れるベクトルを用意しておきます．
     </p>
 
-    <pre>&gt; t <- numeric(10)</pre>
+    <pre>&gt; t &lt;- numeric(10)</pre>
 
     <p>まずはベースライン．普通のK-meansです．</p>
 
