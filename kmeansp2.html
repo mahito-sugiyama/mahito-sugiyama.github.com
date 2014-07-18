@@ -60,28 +60,28 @@
 
     <p>単純な例で速度を比較してみます．まずデータを生成します．</p>
 
-    <pre>> x <- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
+    <pre>&gt; x <- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
 
     <p>
       データ数1,000,000，次元数2，クラスタ数2のデータセットです．<br>
       速度は10回の平均で測ります，結果を入れるベクトルを用意しておきます．
     </p>
 
-    <pre>> t <- numeric(10)</pre>
+    <pre>&gt; t <- numeric(10)</pre>
 
     <p>まずはベースライン．普通のK-meansです．</p>
 
     <pre>
-> for (i in 1:10) t[i] <- system.time(kmeans(x, 2))[1]; mean(t)
+&gt; for (i in 1:10) t[i] &lt;- system.time(kmeans(x, 2))[1]; mean(t)
 [1] 0.5734  # 単位は秒</pre>
 
       <p>次に，上に載せたK-means++です．devtoolsライブラリにある<code>source_gist</code>関数を使うと，gistのコードを直接読み込むことができます．</p>
 
       <pre>
-> install.packages("devtools")
-> library(devtools)
-> source_gist("ef54a3b17fff4629f106")
-> for (i in 1:10) t[i] <- system.time(kmeansp2(x, 2))[1]; mean(t)
+&gt; install.packages("devtools")
+&gt; library(devtools)
+&gt; source_gist("ef54a3b17fff4629f106")
+&gt; for (i in 1:10) t[i] &lt;- system.time(kmeansp2(x, 2))[1]; mean(t)
 [1] 0.6614</pre>
 
     <p>
@@ -90,9 +90,9 @@
     </p>
 
     <pre>
-> install.packages("LICORS")
-> library(LICORS)
-> for (i in 1:10) t[i] <- system.time(kmeanspp(x, 2, nstart = 1))[1]; mean(t)
+&gt; install.packages("LICORS")
+&gt; library(LICORS)
+&gt; for (i in 1:10) t[i] &lt;- system.time(kmeanspp(x, 2, nstart = 1))[1]; mean(t)
 [1] 2.7971</pre>
 
     <p>
@@ -101,9 +101,9 @@
     </p>
 
     <pre>
-> install.packages("pracma")
-> library(pracma)
-> for (i in 1:10) t[i] <- system.time(kmpp(x, 2))[1]; mean(t)
+&gt; install.packages("pracma")
+&gt; library(pracma)
+&gt; for (i in 1:10) t[i] &lt;- system.time(kmpp(x, 2))[1]; mean(t)
 [1] 4.7541</pre>
 
     <p>8倍ほど遅くなってしまっています．これもfor文（apply関数）の使用が原因です．<br>
@@ -119,28 +119,28 @@
     </p>
 
     <pre>
-> x <- matrix(runif(3e6), ncol=3)  # データ数1,000,000，次元数3
-> q <- runif(3)</pre>
+&gt; x &lt;- matrix(runif(3e6), ncol=3)  # データ数1,000,000，次元数3
+&gt; q &lt;- runif(3)</pre>
 
     <p>まずは，for文を使って普通に距離を計算してみます．</p>
 
     <pre>
-> dist <- numeric(nrow(x))  # 結果を入れるベクトル
-> system.time(for (i in 1:nrow(x)) dist[i] <- sqrt(sum((q - x[i,])^2)))
-   user  system elapsed 
+&gt; dist &lt;- numeric(nrow(x))  # 結果を入れるベクトル
+&gt; system.time(for (i in 1:nrow(x)) dist[i] &lt;- sqrt(sum((q - x[i,])^2)))
+   user  system elapsed
   2.017   0.007   2.024</pre>
 
     <p>apply関数を使うと，もう少し簡潔に書けます．</p>
 
     <pre>
-> system.time(dist <- apply(x, 1, function(x) sqrt(sum((x - q)^2))))
-   user  system elapsed 
+&gt; system.time(dist &lt;- apply(x, 1, function(x) sqrt(sum((x - q)^2))))
+   user  system elapsed
   2.392   0.027   2.418</pre>
 
     <p>しかし，速度はほぼ同じ，むしろ遅くなってしまっています．そこで，この処理を以下のようにベクトル化します．</p>
 
     <pre>
-> system.time(dist <- sqrt(colSums((t(x) - q)^2)))
+&gt; system.time(dist &lt;- sqrt(colSums((t(x) - q)^2)))
    user  system elapsed
   0.023   0.001   0.023</pre>
 
