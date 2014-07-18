@@ -23,7 +23,7 @@
       <ul class="menuBox mymenu">
 	<li class="item"><a href="index.html">Home</a></li>
 	<li class="item"><a href="about.html">自己紹介</a></li>
-	<!-- <li><a href="research.html">Research</a></li> -->
+	<!-- <li class="item"><a href="research.html">研究紹介</a></li> -->
 	<li class="item"><a href="publications.html">研究業績</a></li>
 	<li class="item"><a href="materials.html">講義資料</a></li>
 
@@ -36,6 +36,9 @@
             <li role="presentation" class="divider"></li>
             <li role="presentation"><a role="menuitem" tabindex="0" href="https://github.com/mahito-sugiyama">GitHub</a></li>
             <li role="presentation"><a role="menuitem" tabindex="0" href="http://www.scribd.com/hito_maro">Scribd</a></li>
+
+	    <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="0" href="kmeansp2.html">K-means++ in R</a></li>
           </ul>
 	</li>
       </ul>
@@ -47,7 +50,7 @@
 
     <h2 class="contents-top">RでK-means++を実装する</h2>
 
-    <p>R に付属の関数 <code>kmeans</code> を使って，K-means++をなるべく高速に実装します．</p>
+    <p>R に付属の関数 <code>kmeans</code> を使って，K-means++をなるべく高速に実装します．特に必要となるライブラリはありません．</p>
 
     <h3 class="pub-header" id="kmeansp2">コード</h3>
 
@@ -55,7 +58,7 @@
 
     <h3 class="pub-header">検証</h3>
 
-    <p>単純な例で比較してみます．まずデータを生成します．</p>
+    <p>単純な例で速度を比較してみます．まずデータを生成します．</p>
 
     <pre>> x <- rbind(matrix(rnorm(1e6, 0, 1), ncol=2), matrix(rnorm(1e6, 5, 1), ncol=2))</pre>
 
@@ -70,13 +73,14 @@
 
     <pre>
 > for (i in 1:10) t[i] <- system.time(kmeans(x, 2))[1]; mean(t)
-[1] 0.5734</pre>
+[1] 0.5734  # 単位は秒</pre>
 
-    <p>次に，上に載せたK-means++です．ここでは，devtoolsライブラリにある<code>source_gist</code>関数で読み込みます．</p>
+      <p>次に，上に載せたK-means++です．devtoolsライブラリにある<code>source_gist</code>関数を使うと，gistのコードを直接読み込むことができます．</p>
 
-    <pre>
-> install.packages("devtools"); library(devtools)
-> source_gist('ef54a3b17fff4629f106')
+      <pre>
+> install.packages("devtools")
+> library(devtools)
+> source_gist("ef54a3b17fff4629f106")
 > for (i in 1:10) t[i] <- system.time(kmeansp2(x, 2))[1]; mean(t)
 [1] 0.6614</pre>
 
@@ -86,24 +90,61 @@
     </p>
 
     <pre>
-> install.packages("LICORS"); library(LICORS)
+> install.packages("LICORS")
+> library(LICORS)
 > for (i in 1:10) t[i] <- system.time(kmeanspp(x, 2, nstart = 1))[1]; mean(t)
 [1] 2.7971</pre>
 
     <p>
-      約4倍遅いです．これは，距離計算がベクトル化されておらず，<code>apply</code>関数（for文）で実装されているためです．<br>
+      約4倍も遅いです．これは，距離計算がベクトル化されておらず，apply関数（for文）で実装されているためです．<br>
       最後に，<a href="https://stat.ethz.ch/pipermail/r-help/2012-January/300051.html">このコード</a>を試してみます．<a href="http://www.inside-r.org/packages/cran/pracma/docs/pdist">ライブラリpracma</a> にある<code>distmat</code>関数を使って距離計算をしています．
     </p>
 
     <pre>
-> install.packages("pracma"); library(pracma)
+> install.packages("pracma")
+> library(pracma)
 > for (i in 1:10) t[i] <- system.time(kmpp(x, 2))[1]; mean(t)
 [1] 4.7541</pre>
 
-    <p>8倍ほど遅くなってしまっています．これもfor文（<code>apply</code>関数）の使用が原因です．<br>
-      このように，for文を避けて処理をベクトル化することで，高速に処理できます．<br>
-      特に理由が無い限り，R上でK-means++を使いたいときには，<a href="#kmeansp2">上で紹介したコード</a>を使うのがベストでしょう．
+    <p>8倍ほど遅くなってしまっています．これもfor文（apply関数）の使用が原因です．<br>
+      このように，for文を避けて処理をベクトル化することで，高速に処理できます．
+      R上でK-means++を使うときには，ぜひ<a href="#kmeansp2">上で紹介したコード</a>を使ってみてください．
     </p>
+
+    <h3 class="pub-header">高速化のポイント</h3>
+
+    <p>
+      あるベクトル <em>q</em> から，データセット <em>X</em> 中の各ベクトルへの（ユークリッド）距離を全て求める計算を，どのように実装するかがポイントです（上のコードでは10行目）．<br>
+      例えば，以下のようにデータを生成します．
+    </p>
+
+    <pre>
+> x <- matrix(runif(3e6), ncol=3)  # データ数1,000,000，次元数3
+> q <- runif(3)</pre>
+
+    <p>まずは，for文を使って普通に距離を計算してみます．</p>
+
+    <pre>
+> dist <- numeric(nrow(x))  # 結果を入れるベクトル
+> system.time(for (i in 1:nrow(x)) dist[i] <- sqrt(sum((q - x[i,])^2)))
+   user  system elapsed 
+  2.017   0.007   2.024</pre>
+
+    <p>apply関数を使うと，もう少し簡潔に書けます．</p>
+
+    <pre>
+> system.time(dist <- apply(x, 1, function(x) sqrt(sum((x - q)^2))))
+   user  system elapsed 
+  2.392   0.027   2.418</pre>
+
+    <p>しかし，速度はほぼ同じ，むしろ遅くなってしまっています．そこで，この処理を以下のようにベクトル化します．</p>
+
+    <pre>
+> system.time(dist <- sqrt(colSums((t(x) - q)^2)))
+   user  system elapsed
+  0.023   0.001   0.023</pre>
+
+    <p>なんと100倍くらい速くなりました．</p>
 
     <h3 class="pub-header">参考文献</h3>
     Arthur, D. and Vassilvitskii, S.: <strong>K-means++: The Advantages of Careful Seeding</strong>, In <em>Proc. of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms</em>, 1027-1035 (2007).
