@@ -14,10 +14,10 @@
 <body>
 <h1 id="kdd2017-codes">KDD2017 codes</h1>
 <p>Codes to reproduce results of our KDD2017 submission: <strong>Significant Pattern Mining on Continuous Variables</strong> by Mahito Sugiyama (Osaka Univ.) and Karsten Borgwadt (ETH Zürich).</p>
-<p>Please download from <a href = "./kdd2017.zip">HERE</a>.</p>
+<p>Please download the entire codes from <a href = "./kdd2017.zip">HERE</a>.</p>
 <p>The proposed method with the Bonferroni correction version is implemented in C++ and its source code is <code>src/cc/main.cc</code>.<br />
 The binarization-based methods are composed of two parts: Binarization is implemented in Python 3 and the code is <code>src/python/binarize.py</code>, and significant itemset mining is implemented in C and codes are in the directory <code>src/c</code>, which is obtained as a part of <a href="https://www.bsse.ethz.ch/mlcb/research/machine-learning/wylight.html">Westfall-Young light</a>.</p>
-<p>You can reproduce results in our paper by the R script <code>src/R/script_for_paper.R</code>.</p>
+<p>You can reproduce results in our paper by the R script <code>src/R/script_for_paper.R</code>, which is a wrapper of C/C++ implementation.</p>
 <h2 id="usege">Usege:</h2>
 <p>First, compile C and C++ codes:</p>
 <pre><code>$ cd src/cc
@@ -30,7 +30,7 @@ $ cd ../../../</code></pre>
 <p>The Boost libary is required to compile the C++ code. Then go to the R directory and start R:</p>
 <pre><code>$ cd src/R
 $ R</code></pre>
-<p>In the R environment, load the script file <code>script_for_paper.R</code> and run the function <code>run.script</code> with appropriate arguments:</p>
+<p>In the R environment, load the script file <code>script_for_paper.R</code> and run the function <code>run.script()</code> with appropriate arguments:</p>
 <pre><code>&gt; source(&quot;script_for_paper.R&quot;)
 &gt; res &lt;- run.script()
   &gt; Generate synthetic data
@@ -55,13 +55,17 @@ Recall                0.9375000           NA 5.0000e-01</code></pre>
 <li><code>n</code>: The number of features for synthetic data (default: <code>n = 20</code>)</li>
 <li><code>r0</code>: Minor class ratio (default: <code>r0 = 0.5</code>)</li>
 <li><code>data.name</code>: Name of a dataset. If <code>data.name = &quot;synth&quot;</code>, a synthetic dataset is generated, and if it is one of the following names, the corresponding real data is used (default: <code>data.name = &quot;synth&quot;</code>)</li>
-<li><code>(&quot;ctg&quot;, &quot;faults&quot;, &quot;ionosphere&quot;, &quot;segment&quot;, &quot;waveform&quot;, &quot;wdbc&quot;)</code></li>
+<ul>
+  <li><code>(&quot;ctg&quot;, &quot;faults&quot;, &quot;ionosphere&quot;, &quot;segment&quot;, &quot;waveform&quot;, &quot;wdbc&quot;)</code></li>
+</ul>
 <li><code>base.dir</code>: A directory for data and results (default: <code>base.dir = &quot;./&quot;</code>)</li>
 <li><code>alpha</code>: The FWER level (default: <code>alpha = 0.05</code>)</li>
 <li><code>bin.type</code>: A type of binarization, which should be one of the following list (default: <code>bin.type = 1</code>)</li>
-<li><code>bin.type = 1</code>: median-based binarization</li>
-<li><code>bin.type = 2</code>: interordinal scaling</li>
-<li><code>bin.type = 3</code>: interval scaling</li>
+<ul>
+  <li><code>bin.type = 1</code>: median-based binarization</li>
+  <li><code>bin.type = 2</code>: interordinal scaling</li>
+  <li><code>bin.type = 3</code>: interval scaling</li>
+</ul>
 <li><code>run.prop</code>: Run the proposed method if <code>TRUE</code> (default: <code>run.prop = TRUE</code>)</li>
 <li><code>run.bonf</code>: Run the bonferroni correction method if <code>TRUE</code> (default: <code>run.bonf = TRUE</code>)</li>
 <li><code>run.bin</code>: Run the binarization-based method if <code>TRUE</code> (default: <code>run.bin = TRUE</code>)</li>
